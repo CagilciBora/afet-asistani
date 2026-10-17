@@ -1,0 +1,189 @@
+{
+  "olcum": {
+    "ad": "#2 + bozuk yazımlı not",
+    "model": "gemini-3.5-flash",
+    "kapsanan": 14,
+    "gerekli": 14,
+    "kodla_eklenen": [],
+    "gruplar": [
+      "bebek"
+    ],
+    "eksik_grup": [],
+    "cot": true,
+    "isaret": []
+  },
+  "hane": "Hane: 2 yetişkin. Bebek: 1, çocuk: 0, yaşlı: 0, bunlardan hareket kısıtlı: 0. Düzenli ilaç: hayır. Evcil hayvan: yok. Bina yapım yılı: 2000 öncesi. Kat: 4. kat ve üstü. Binada çatlak/hasar: yok.",
+  "ek_not": "bebegimz var evmiz eski kat yuksek ne yapmaliyz",
+  "dikkat": [
+    "Bina 2000 öncesi yapılmış. Depreme dayanıklılığı için yetkili kurum/uzman incelemesi önerilir.",
+    "Üst kat: deprem anında merdivene/balkona koşmayın, asansör kullanmayın; sarsıntı bitince binayı önceden belirlenen yoldan terk edin.",
+    "Hanede tahliyede yardıma ihtiyaç duyabilecek birey var; kimin kime yardım edeceği önceden belirlenmeli."
+  ],
+  "plan": {
+    "dusunce": "a) Hanede 1 bebek bulunuyor; tahliye esnasında ebeveyn desteğine ve çantasında özel hijyen/beslenme malzemelerine ihtiyaç duyar.\nb) Bina 2000 öncesi yapımı ve 4. kat veya üstünde yer alıyor. Deprem anında sarsıntı daha şiddetli hissedilebilir; asansör ve merdivenlere koşulmamalı, sarsıntı bitince tahliye olunmalıdır. Binanın durumu için uzman incelemesi önerilmelidir.\nc) AFAD rehberindeki bebekli aileler için çanta hazırlığı, eşya sabitleme, yetkili mühendis incelemesi, sarsıntı anında evde kalıp çök-kapan-tutun yapma ve sonrasında güvenli tahliye maddeleri kritik önem taşımaktadır.\nd) Tüm maddelerin verilen rehberle uyumlu olduğu ve güvenlik kurallarına (kesin bina yargısı vermeme, tıbbi doz önermeme) uyulduğu doğrulandı.",
+    "risk_ozeti": "Binanızın 2000 yılı öncesinde yapılmış olması nedeniyle yetkili bir mühendis tarafından incelenmesi önerilir. Yüksek katta bulunmanız sebebiyle deprem esnasında kesinlikle asansör veya merdivenlere koşmamalı, sarsıntı bitene kadar evde güvenli bir alanda kalmalısınız. Bebeğinizin varlığı göz önünde bulundurularak tahliye planı ve acil durum çantası önceden titizlikle hazırlanmalıdır.",
+    "oncesi": [
+      "Bebeğiniz dahil her birey için ayrı bir afet ve acil durum çantası hazırlayın; bebeğin maması, bezi ve yedek kıyafetlerini ekleyin.",
+      "Binanızın deprem yönetmeliğine uygunluğunu yetkili bir uzmana/mühendise inceletin.",
+      "Ağır mobilyaları, beyaz eşyaları ve düşebilecek eşyaları duvara sağlam bir şekilde sabitleyin.",
+      "Aile afet planınızı yaparak deprem anında kimin bebeği alacağını ve ev dışı buluşma noktanızı belirleyin.",
+      "Yatakların yanına su, düdük, fener ve ayakkabı koyun.",
+      "Elektrik şalteri, su ve doğal gaz vanalarının yerlerini ve nasıl kapatılacağını öğrenin.",
+      "Çıkış yollarını ve koridorları kapatabilecek eşyaları kaldırın."
+    ],
+    "aninda": [
+      "Kesinlikle panik yapmayın ve sakinliğinizi koruyun.",
+      "Sağlam bir eşyanın (koltuk, kanepe vb.) yanında ÇÖK - KAPAN - TUTUN hareketini yapın; bebeğinizi kucağınıza alarak başını ve enseyi koruyun.",
+      "Sarsıntı sırasında merdivenlere, balkonlara koşmayın ve asla asansör kullanmayın.",
+      "Pencere, cam ve sabitlenmemiş ağır mobilyalardan uzak durun.",
+      "Yataktaysanız, üzerinize düşecek ağır bir eşya yoksa başınızı yastıkla koruyun.",
+      "Mutfaktaysanız ocak ve fırını kapatıp dökülebilecek maddelerden uzaklaşın.",
+      "Sarsıntı tamamen bitene kadar olduğunuz güvenli alanda kalın."
+    ],
+    "sonrasi": [
+      "Sarsıntı durduktan sonra kendinizin ve bebeğinizin durumunu kontrol edin, ayakkabılarınızı giyin.",
+      "Elektrik, gaz ve su vanalarını kapatın; ısıtıcıları söndürün.",
+      "Afet ve acil durum çantanızı alarak binayı daha önce belirlediğiniz tahliye yolundan terk edin.",
+      "Asansör kullanmadan merdivenlerden dikkatlice inin.",
+      "Önceden belirlenen acil durum toplanma bölgesine gidin.",
+      "Artçı sarsıntılar bitene kadar hasarlı olabilecek binaya kesinlikle girmeyin.",
+      "Gaz kokusu hissederseniz vanayı kapatıp camları açın ve hemen binayı terk edin."
+    ],
+    "kisiye_ozel": [
+      {
+        "kim": "Bebek",
+        "ne_yapilmali": "Afet çantasına yeterli miktarda bebek maması, su, bezi, pişik kremi, yedek giysi ve ıslak mendil eklenmeli; deprem anında Çök-Kapan-Tutun yapılırken bebek ebeveyn kucağında başı korunarak tutulmalıdır."
+      }
+    ]
+  },
+  "canta_ham": {
+    "kategoriler": [
+      {
+        "kategori": "Su ve gıda",
+        "esyalar": [
+          {
+            "esya": "içme suyu",
+            "miktar": "3 kişi için 3 günlük",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "konserve, kuru meyve, yüksek kalorili gıdalar",
+            "miktar": "3 günlük",
+            "kimin_icin": "yetişkinler"
+          },
+          {
+            "esya": "bebek maması",
+            "miktar": "3 günlük",
+            "kimin_icin": "bebek"
+          }
+        ]
+      },
+      {
+        "kategori": "Bebek",
+        "esyalar": [
+          {
+            "esya": "bebek bezi ve ıslak mendil",
+            "miktar": "3 günlük",
+            "kimin_icin": "bebek"
+          },
+          {
+            "esya": "biberon",
+            "miktar": "1 adet",
+            "kimin_icin": "bebek"
+          }
+        ]
+      },
+      {
+        "kategori": "Belgeler ve Para",
+        "esyalar": [
+          {
+            "esya": "kimlik, tapu, DASK ve sigorta poliçesi fotokopileri",
+            "miktar": "1 dosya",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "nakit para",
+            "miktar": "yeterli miktarda",
+            "kimin_icin": "herkes"
+          }
+        ]
+      },
+      {
+        "kategori": "Giysi",
+        "esyalar": [
+          {
+            "esya": "iç çamaşırı, çorap, yağmurluk, mevsime uygun temiz giysi",
+            "miktar": "kişi başı 1 takım",
+            "kimin_icin": "herkes"
+          }
+        ]
+      },
+      {
+        "kategori": "İlk yardım",
+        "esyalar": [
+          {
+            "esya": "ilk yardım çantası ve malzemeleri",
+            "miktar": "1 set",
+            "kimin_icin": "herkes"
+          }
+        ]
+      },
+      {
+        "kategori": "Hijyen",
+        "esyalar": [
+          {
+            "esya": "sabun, dezenfektan, diş fırçası ve macunu, ıslak mendil, tuvalet kâğıdı, hijyenik ped",
+            "miktar": "3 günlük",
+            "kimin_icin": "herkes"
+          }
+        ]
+      },
+      {
+        "kategori": "Diğer",
+        "esyalar": [
+          {
+            "esya": "düdük",
+            "miktar": "2 adet",
+            "kimin_icin": "yetişkinler"
+          },
+          {
+            "esya": "el feneri ve uzun ömürlü yedek piller",
+            "miktar": "1 set",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "pilli radyo",
+            "miktar": "1 adet",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "battaniye veya uyku tulumu",
+            "miktar": "kişi başı 1 adet",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "çok amaçlı çakı ve küçük makas",
+            "miktar": "1 adet",
+            "kimin_icin": "yetişkinler"
+          },
+          {
+            "esya": "kâğıt ve kalem",
+            "miktar": "1 set",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "çöp poşeti",
+            "miktar": "1 paket",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "afet ve acil durum aile planı",
+            "miktar": "1 adet",
+            "kimin_icin": "herkes"
+          }
+        ]
+      }
+    ]
+  },
+  "sade_cocuk": null
+}

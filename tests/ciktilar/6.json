@@ -1,0 +1,217 @@
+{
+  "olcum": {
+    "ad": "Kalabalık hane + köpek",
+    "model": "gemini-3.5-flash",
+    "kapsanan": 17,
+    "gerekli": 17,
+    "kodla_eklenen": [],
+    "gruplar": [
+      "bebek",
+      "yasli"
+    ],
+    "eksik_grup": [],
+    "cot": true,
+    "isaret": []
+  },
+  "hane": "Hane: 4 yetişkin. Bebek: 1, çocuk: 0, yaşlı: 2, bunlardan hareket kısıtlı: 0. Düzenli ilaç: hayır. Evcil hayvan: evcil hayvan. Bina yapım yılı: 2000 öncesi. Kat: 1-3. kat. Binada çatlak/hasar: yok.",
+  "ek_not": "Evcil hayvanımız bir köpek.",
+  "dikkat": [
+    "Bina 2000 öncesi yapılmış. Depreme dayanıklılığı için yetkili kurum/uzman incelemesi önerilir.",
+    "Hanede tahliyede yardıma ihtiyaç duyabilecek birey var; kimin kime yardım edeceği önceden belirlenmeli."
+  ],
+  "plan": {
+    "dusunce": "1) Kırılgan Bireyler: 1 bebek (bez, mama, güvenli tahliye sorumlusu), 2 yaşlı (tahliyede rehberlik ve destek), 1 köpek (mama, tasma, sağlık karnesi, taşıma/güvenlik). 2) Bina ve Konum: 2000 öncesi bina (uzman incelemesi yönlendirmesi yapılmalı, kesin hüküm verilmemeli), 1-3. kat (sarsıntı bitmeden dışarı koşulmamalı). 3) AFAD Rehberi Odağı: Bebek, yaşlı ve evcil hayvan içeren genişletilmiş afet çantası, eşya sabitleme, görev dağılımlı aile planı, Çök-Kapan-Tutun, vanaların kapatılması ve toplanma alanına gidiş. 4) Güvenlik ve kaynak kontrolü sağlandı.",
+    "risk_ozeti": "Binanızın 2000 yılı öncesi yapılmış olması nedeniyle bir yetkili mühendis tarafından deprem dayanıklılığının incelenmesi önerilir. Hanenizde bebek, yaşlı bireyler ve bir köpek bulunduğu için deprem öncesi görev dağılımı yapmak ve tahliye planını netleştirmek hayati önem taşımaktadır. Sakinliğinizi koruyarak hazırlıkları tamamlamak afet anındaki riskleri büyük ölçüde azaltacaktır.",
+    "oncesi": [
+      "Aile afet planı yapın; bebek, yaşlılar ve köpeğinizin tahliye sorumlularını önceden belirleyin.",
+      "Her aile üyesi, bebek ve köpeğiniz için özel ihtiyaçları içeren ayrı afet ve acil durum çantaları hazırlayın.",
+      "Binanızın depreme dayanıklılığını yetkili bir uzmana inceletin.",
+      "Ağır mobilyaları, beyaz eşyaları ve dolapları duvara sağlam bir şekilde sabitleyin.",
+      "Yatakların yanına su, fener, düdük ve ayakkabı yerleştirin.",
+      "Mutfak dolabı kapaklarına güvenlik mandalı takın ve ağır eşyaları alt raflara koyun.",
+      "Ailenizle birlikte Çök-Kapan-Tutun tatbikatı gerçekleştirin."
+    ],
+    "aninda": [
+      "Kesinlikle panik yapmayın ve sarsıntı sırasında binayı terk etmeye veya merdivenlere koşmaya çalışmayın.",
+      "Sağlam bir masa altına ya da koruma sağlayacak koltuk/kanepe yanına ÇÖK - KAPAN - TUTUN yapın.",
+      "Camlardan, pencerelerden, dış duvardan ve sabitlenmemiş ağır eşyalardan uzak durun.",
+      "Pencerelerden veya balkondan atlamayın, asansör kesinlikle kullanmayın.",
+      "Yataktaysanız ve üzerinize düşecek ağır bir eşya yoksa kalıp başınızı yastıkla koruyun.",
+      "Mutfaktaysanız ocak ve fırını kapatıp dökülebilecek maddelerden uzaklaşın.",
+      "Kibrit, çakmak yakmayın ve elektrik düğmelerine dokunmayın."
+    ],
+    "sonrasi": [
+      "Sarsıntı tamamen bittiğinde önce kendi ve aile bireylerinizin yaralanma durumunu kontrol edip ayakkabılarınızı giyin.",
+      "Elektrik şalterini, su ve doğal gaz vanalarını kapatın; gaz kokusu varsa camları açıp binayı derhal terk edin.",
+      "Bebeğinizi, yaşlı bireyleri ve köpeğinizi güvenli şekilde yanınıza alarak önceden belirlenen çıkış yolundan binayı terk edin.",
+      "Afet ve acil durum çantalarınızı alarak mahallenizdeki acil toplanma bölgesine gidin.",
+      "Artçı sarsıntılar bitene kadar hasarlı binalara kesinlikle girmeyin.",
+      "Telefonları sadece acil durum ve yangın bildirimleri için kullanın.",
+      "Enkaz altında kalırsanız hareket edip toz kaldırmayın; yerinizi belli etmek için borulara/duvara vurun veya düdük çalın."
+    ],
+    "kisiye_ozel": [
+      {
+        "kim": "Bebek",
+        "ne_yapilmali": "Afet çantasına yeterli miktarda bebek bezi, mama, biberon, pişik kremi ve yedek giysi ekleyin; deprem anında ve sonrasında bebeğin kucakta taşınması görevini bir yetişkine atayın."
+      },
+      {
+        "kim": "Yaşlı Bireyler (2 kişi)",
+        "ne_yapilmali": "Afet çantalarına mevsim şartlarına uygun giysi ve kişisel hijyen ürünleri koyun; tahliye anında düşme riskine karşı her birine rehberlik edecek birer yetişkin sorumlusu belirleyin."
+      },
+      {
+        "kim": "Evcil Hayvan (Köpek)",
+        "ne_yapilmali": "Afet çantasına köpek maması, su kabı, yedek tasma ve sağlık karnesini ekleyin; panikleyip kaçmaması için tahliye esnasında tasmasını bağlı tutun."
+      }
+    ]
+  },
+  "canta_ham": {
+    "kategoriler": [
+      {
+        "kategori": "Su ve gıda",
+        "esyalar": [
+          {
+            "esya": "içme suyu",
+            "miktar": "7 kişi için 3 günlük",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "konserve, kuru meyve, tahin-pekmez",
+            "miktar": "3 günlük",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "bebek maması",
+            "miktar": "3 günlük",
+            "kimin_icin": "bebek"
+          },
+          {
+            "esya": "evcil hayvan maması ve su kabı",
+            "miktar": "3 günlük",
+            "kimin_icin": "evcil hayvan"
+          }
+        ]
+      },
+      {
+        "kategori": "Bebek",
+        "esyalar": [
+          {
+            "esya": "bebek bezi ve bebek ıslak mendili",
+            "miktar": "3 günlük",
+            "kimin_icin": "bebek"
+          },
+          {
+            "esya": "biberon",
+            "miktar": "1 adet",
+            "kimin_icin": "bebek"
+          }
+        ]
+      },
+      {
+        "kategori": "Belgeler ve Para",
+        "esyalar": [
+          {
+            "esya": "kimlik, tapu, sigorta, DASK poliçesi fotokopileri",
+            "miktar": "1 dosya",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "evcil hayvan sağlık karnesi",
+            "miktar": "1 adet",
+            "kimin_icin": "evcil hayvan"
+          },
+          {
+            "esya": "para",
+            "miktar": "yeterli miktarda",
+            "kimin_icin": "herkes"
+          }
+        ]
+      },
+      {
+        "kategori": "Giysi",
+        "esyalar": [
+          {
+            "esya": "mevsime uygun temiz giysi, iç çamaşırı, çorap, yağmurluk",
+            "miktar": "kişi başı 1 takım",
+            "kimin_icin": "herkes"
+          }
+        ]
+      },
+      {
+        "kategori": "İlk yardım ve Sağlık",
+        "esyalar": [
+          {
+            "esya": "ilk yardım çantası ve malzemeleri",
+            "miktar": "1 set",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "yedek gözlük",
+            "miktar": "1 adet",
+            "kimin_icin": "yaşlı"
+          }
+        ]
+      },
+      {
+        "kategori": "Hijyen",
+        "esyalar": [
+          {
+            "esya": "sabun, dezenfektan, diş fırçası ve macunu, ıslak mendil, tuvalet kâğıdı, hijyenik ped",
+            "miktar": "3 günlük",
+            "kimin_icin": "herkes"
+          }
+        ]
+      },
+      {
+        "kategori": "Diğer",
+        "esyalar": [
+          {
+            "esya": "düdük",
+            "miktar": "kişi başı 1 adet",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "el feneri ve uzun ömürlü yedek piller",
+            "miktar": "1 set",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "pilli radyo",
+            "miktar": "1 adet",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "battaniye veya uyku tulumu",
+            "miktar": "kişi başı 1 adet",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "çok amaçlı çakı ve küçük makas",
+            "miktar": "1 adet",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "kâğıt ve kalem",
+            "miktar": "1 set",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "çöp poşeti",
+            "miktar": "1 paket",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "afet ve acil durum aile planı",
+            "miktar": "1 adet",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "evcil hayvan taşıma çantası",
+            "miktar": "1 adet",
+            "kimin_icin": "evcil hayvan"
+          }
+        ]
+      }
+    ]
+  },
+  "sade_cocuk": null
+}

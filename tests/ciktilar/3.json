@@ -1,0 +1,163 @@
+{
+  "olcum": {
+    "ad": "Yalnız yaşayan yaşlı, ilaç",
+    "model": "gemini-3.5-flash",
+    "kapsanan": 14,
+    "gerekli": 14,
+    "kodla_eklenen": [],
+    "gruplar": [
+      "yasli"
+    ],
+    "eksik_grup": [],
+    "cot": true,
+    "isaret": []
+  },
+  "hane": "Hane: 0 yetişkin. Bebek: 0, çocuk: 0, yaşlı: 1, bunlardan hareket kısıtlı: 0. Düzenli ilaç: evet. Evcil hayvan: yok. Bina yapım yılı: Bilmiyorum. Kat: Zemin / bahçe katı. Binada çatlak/hasar: yok.",
+  "ek_not": "",
+  "dikkat": [
+    "Binanın yapım yılı bilinmiyor; güncel deprem yönetmeliğine göre yapılıp yapılmadığının öğrenilmesi önerilir.",
+    "Hanede tahliyede yardıma ihtiyaç duyabilecek birey var; kimin kime yardım edeceği önceden belirlenmeli."
+  ],
+  "plan": {
+    "dusunce": "a) Hanede 1 yaşlı birey var ve düzenli ilaç kullanıyor; 7 günlük ilaç stoğu ve tahliye hazırlığı gerekli. b) Bina yapım yılı bilinmiyor, mühendis incelemesi önerilmeli; zemin katta olunsa da sarsıntı anında hemen dışarı koşulmamalı. c) AFAD rehberine göre ilaçlı/yaşlı birey için çanta hazırlanması, yatak yanına ayakkabı konması, Çök-Kapan-Tutun ve sarsıntı sonrası vanaların kapatılıp toplanma alanına gidilmesi kritiktir. d) Tüm maddeler rehbere uygundur.",
+    "risk_ozeti": "Hanenizde düzenli ilaç kullanan yaşlı bir birey bulunmaktadır ve binanızın yapım yılı bilinmemektedir. Zemin katta olsanız bile deprem anında panikle dışarı koşmamak, güvenli alanda sarsıntının geçmesini beklemek hayati önem taşır. Binanızın durumunu yetkili bir uzmana kontrol ettirmeniz tavsiye edilir.",
+    "oncesi": [
+      "Yaşlı bireyin 7 günlük kişisel ilaçlarını ve önemli evrak kopyalarını içeren bir afet ve acil durum çantası hazırlayın.",
+      "Binanızın güncel deprem yönetmeliğine uygunluğunu yetkili bir mühendise inceletin.",
+      "Yatakların yanına ayakkabı, fener, su ve düdük yerleştirin.",
+      "Ağır mobilyaları, beyaz eşyaları ve evdeki büyük eşyaları duvara sabitleyin.",
+      "Elektrik şalteri, su ve doğal gaz vanalarının yerlerini ve kapatılma şekillerini öğrenin.",
+      "Ev içerisinde ve dışında buluşma noktaları ile bölge dışı irtibat kişisi belirleyin.",
+      "Ailenizle birlikte Çök-Kapan-Tutun tatbikatı yapın."
+    ],
+    "aninda": [
+      "Kesinlikle panik yapmayın ve sarsıntı sırasında binayı terk etmek için dışarı koşmayın.",
+      "Güvenli bir eşyanın yanında ÇÖK - KAPAN - TUTUN hareketini uygulayın.",
+      "Başınızı ve boynunuzu ellerinizle, yastıkla veya kalın bir kitapla koruyun.",
+      "Pencerelerden, camlardan ve sabitlenmemiş ağır eşyalardan uzak durun.",
+      "Yataktaysanız ve üzerinize düşecek tehlikeli bir nesne yoksa orada kalın, başınızı yastıkla koruyun.",
+      "Kibrit, çakmak yakmayın ve elektrik düğmelerine dokunmayın.",
+      "Mutfaktaysanız ocak ve fırın gibi cihazları kapatıp güvenli alana geçin."
+    ],
+    "sonrasi": [
+      "Sarsıntı tamamen bittiğinde öncelikle kendi sağlığınızı ve yaşlı bireyi kontrol edin.",
+      "Dışarı çıkmadan önce mutlaka ayakkabılarınızı giyin.",
+      "Elektrik, gaz ve su vanalarını kapatın; gaz kokusu varsa camları açıp hemen binayı terk edin.",
+      "Afet ve acil durum çantasını alarak önceden belirlenen toplanma bölgesine gidin.",
+      "Artçı sarsıntılar bitene kadar hasarlı binalara kesinlikle girmeyin.",
+      "Acil durumlar dışında telefon hatlarını meşgul etmeyin.",
+      "Enkaz altında kalınması halinde toz yutmamak için ağzınızı kapatın ve borulara vurarak/düdük çalarak yerinizi bildirin."
+    ],
+    "kisiye_ozel": [
+      {
+        "kim": "Yaşlı birey",
+        "ne_yapilmali": "Kullandığı kişisel ilaçların en az 7 günlük stok hali acil durum çantasına eklenmeli, başucuna kolay giyilebilir ayakkabı konulmalı ve tahliye anında kendisine rehberlik edilmelidir."
+      }
+    ]
+  },
+  "canta_ham": {
+    "kategoriler": [
+      {
+        "kategori": "Su ve gıda",
+        "esyalar": [
+          {
+            "esya": "içme suyu",
+            "miktar": "3 günlük",
+            "kimin_icin": "yaşlı"
+          },
+          {
+            "esya": "konserve, kuru meyve, tahin-pekmez ve yüksek kalorili gıdalar",
+            "miktar": "3 günlük",
+            "kimin_icin": "yaşlı"
+          }
+        ]
+      },
+      {
+        "kategori": "Sağlık ve İlk yardım",
+        "esyalar": [
+          {
+            "esya": "düzenli kullanılan kişisel ilaçlar",
+            "miktar": "7 günlük",
+            "kimin_icin": "yaşlı"
+          },
+          {
+            "esya": "yedek gözlük",
+            "miktar": "1 adet",
+            "kimin_icin": "yaşlı"
+          },
+          {
+            "esya": "ilk yardım çantası",
+            "miktar": "1 adet",
+            "kimin_icin": "herkes"
+          }
+        ]
+      },
+      {
+        "kategori": "Belgeler ve Para",
+        "esyalar": [
+          {
+            "esya": "kimlik, tapu, sigorta ve ruhsat belgeleri, Zorunlu Deprem Poliçesi fotokopileri",
+            "miktar": "1 dosya",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "nakit para",
+            "miktar": "yeterli miktarda",
+            "kimin_icin": "herkes"
+          }
+        ]
+      },
+      {
+        "kategori": "Giysi",
+        "esyalar": [
+          {
+            "esya": "mevsime uygun temiz giysi, iç çamaşırı, çorap, yağmurluk",
+            "miktar": "1 takım",
+            "kimin_icin": "yaşlı"
+          }
+        ]
+      },
+      {
+        "kategori": "Hijyen",
+        "esyalar": [
+          {
+            "esya": "sabun, dezenfektan, diş fırçası ve macunu, ıslak mendil, tuvalet kâğıdı",
+            "miktar": "3 günlük",
+            "kimin_icin": "yaşlı"
+          }
+        ]
+      },
+      {
+        "kategori": "Diğer",
+        "esyalar": [
+          {
+            "esya": "düdük",
+            "miktar": "1 adet",
+            "kimin_icin": "yaşlı"
+          },
+          {
+            "esya": "el feneri ve yedek piller",
+            "miktar": "1 set",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "pilli radyo",
+            "miktar": "1 adet",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "battaniye veya uyku tulumu",
+            "miktar": "1 adet",
+            "kimin_icin": "yaşlı"
+          },
+          {
+            "esya": "çok amaçlı çakı, küçük makas, kâğıt, kalem, çöp poşeti",
+            "miktar": "1 set",
+            "kimin_icin": "herkes"
+          }
+        ]
+      }
+    ]
+  },
+  "sade_cocuk": null
+}

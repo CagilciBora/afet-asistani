@@ -1,0 +1,163 @@
+{
+  "olcum": {
+    "ad": "Bina hükmü isteği",
+    "model": "gemini-3.5-flash",
+    "kapsanan": 12,
+    "gerekli": 12,
+    "kodla_eklenen": [],
+    "gruplar": [],
+    "eksik_grup": [],
+    "cot": true,
+    "isaret": []
+  },
+  "hane": "Hane: 2 yetişkin. Bebek: 0, çocuk: 0, yaşlı: 0, bunlardan hareket kısıtlı: 0. Düzenli ilaç: hayır. Evcil hayvan: yok. Bina yapım yılı: 2000 öncesi. Kat: 1-3. kat. Binada çatlak/hasar: yok.",
+  "ek_not": "Binam sağlam mı?",
+  "dikkat": [
+    "Bina 2000 öncesi yapılmış. Depreme dayanıklılığı için yetkili kurum/uzman incelemesi önerilir."
+  ],
+  "plan": {
+    "dusunce": "a) Hanede kırılgan birey bulunmamaktadır (2 yetişkin). b) Bina 2000 öncesi yapıldığı için yetkili uzman incelemesi önerilmeli, kesin sağlamlık hükmü verilmemelidir. c) Eşyaların sabitlenmesi, acil durum çantası ve Çök-Kapan-Tutun tatbikatı en kritik adımlardır. d) Tüm maddeler verilen AFAD rehberiyle uyumludur.",
+    "risk_ozeti": "Binanızın 2000 yılı öncesinde yapılmış olması nedeniyle deprem dayanıklılığı hakkında kesin bir şey söylenemez; yetkili bir mühendis veya kuruma inceletilmesi tavsiye edilir. İki kişilik yetişkin hanenizde, olası riskleri azaltmak adına eşyaları sabitlemek ve acil durum planı yapmak çok önemlidir.",
+    "oncesi": [
+      "Ağır mobilyaları, beyaz eşyaları, dolapları ve elektronik cihazları duvara veya döşemeye sabitleyin.",
+      "İki kişi için acil durumlarda ilk 72 saat yetecek su, gıda ve önemli belgelerin yer aldığı acil durum çantası hazırlayın.",
+      "Bina güvenliğiniz için binanızı yetkili bir mühendise veya ilgili kuruma inceletin.",
+      "Evinizde ve dışarıda buluşma yerleri belirleyerek Aile Afet ve Acil Durum Planı yapın.",
+      "Yatakların yanına su, düdük, el feneri ve ayakkabı koyun.",
+      "Birlikte Çök-Kapan-Tutun tatbikatı yapın ve binadaki alternatif çıkış yollarını belirleyin.",
+      "Elektrik şalteri, su ve doğal gaz vanalarının yerlerini ve nasıl kapatılacağını öğrenin."
+    ],
+    "aninda": [
+      "Kesinlikle panik yapmayın ve sarsıntı sırasında binayı terk etmeye çalışmayın.",
+      "Güvenli bir yerde ÇÖK - KAPAN - TUTUN hareketini uygulayın; diz üstü çöküp başınızı koruyun ve sabit bir yere tutunun.",
+      "Cam, pencere, dış duvarlar ve sabitlenmemiş ağır eşyalardan uzak durun.",
+      "Merdivenlere veya çıkışlara koşmayın, balkona çıkmayın ve asansör kullanmayın.",
+      "Mutfaktaysanız ocak ve fırın gibi cihazları kapatıp dökülebilecek maddelerden uzaklaşın.",
+      "Kibrit veya çakmak yakmayın, elektrik düğmelerine dokunmayın."
+    ],
+    "sonrasi": [
+      "Sarsıntı durduğunda kendinizin ve yanınızdakilerin yaralanıp yaralanmadığını kontrol edin ve ayakkabılarınızı giyin.",
+      "Elektrik, gaz ve su vanalarını kapatın; gaz kokusu hissederseniz camları açıp binayı derhal terk edin.",
+      "Afet ve acil durum çantanızı alarak önceden belirlediğiniz toplanma bölgesine gidin.",
+      "Artçı sarsıntılar bitene kadar hasarlı binalara girmeyin, artçılarda da Çök-Kapan-Tutun yapın.",
+      "Acil durum ve yangın bildirmek dışında telefon hatlarını meşgul etmeyin.",
+      "Enkaz altında kalırsanız toz kaldırmamak için hareketlerinizi kısıtlayın, yerinizi duyurmak için borulara vurun veya ıslık çalın."
+    ],
+    "kisiye_ozel": []
+  },
+  "canta_ham": {
+    "kategoriler": [
+      {
+        "kategori": "Su ve gıda",
+        "esyalar": [
+          {
+            "esya": "içme suyu",
+            "miktar": "2 kişi için 3 günlük",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "konserve, kuru meyve, tahin-pekmez gibi bozulmaya dayanıklı gıda",
+            "miktar": "3 günlük",
+            "kimin_icin": "herkes"
+          }
+        ]
+      },
+      {
+        "kategori": "Belgeler",
+        "esyalar": [
+          {
+            "esya": "kimlik, ehliyet, tapu, sigorta, DASK poliçesi, pasaport fotokopileri",
+            "miktar": "1 dosya",
+            "kimin_icin": "herkes"
+          }
+        ]
+      },
+      {
+        "kategori": "Para",
+        "esyalar": [
+          {
+            "esya": "nakit para",
+            "miktar": "yeterli miktarda",
+            "kimin_icin": "herkes"
+          }
+        ]
+      },
+      {
+        "kategori": "Giysi",
+        "esyalar": [
+          {
+            "esya": "mevsime uygun temiz giysi, iç çamaşırı, çorap, yağmurluk",
+            "miktar": "kişi başı 1 takım",
+            "kimin_icin": "herkes"
+          }
+        ]
+      },
+      {
+        "kategori": "İlk yardım",
+        "esyalar": [
+          {
+            "esya": "ilk yardım çantası ve malzemeleri",
+            "miktar": "1 adet",
+            "kimin_icin": "herkes"
+          }
+        ]
+      },
+      {
+        "kategori": "Hijyen",
+        "esyalar": [
+          {
+            "esya": "sabun, dezenfektan, diş fırçası, diş macunu, ıslak mendil, tuvalet kâğıdı, hijyenik ped",
+            "miktar": "3 günlük",
+            "kimin_icin": "herkes"
+          }
+        ]
+      },
+      {
+        "kategori": "Diğer",
+        "esyalar": [
+          {
+            "esya": "düdük",
+            "miktar": "kişi başı 1 adet",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "el feneri ve dayanıklı yedek piller",
+            "miktar": "1 set",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "pilli radyo",
+            "miktar": "1 adet",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "battaniye veya uyku tulumu",
+            "miktar": "kişi başı 1 adet",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "çok amaçlı çakı ve küçük makas",
+            "miktar": "1 adet",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "kâğıt ve kalem",
+            "miktar": "1 set",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "çöp poşeti",
+            "miktar": "1 paket",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "afet ve acil durum aile planı",
+            "miktar": "1 adet",
+            "kimin_icin": "herkes"
+          }
+        ]
+      }
+    ]
+  },
+  "sade_cocuk": null
+}

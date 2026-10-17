@@ -23,7 +23,7 @@ sys.path.insert(0, str(ROOT))
 import logic  # noqa: E402
 from logic import Hane  # noqa: E402
 
-BEKLEME = 4  # model çağrıları arası saniye (ücretsiz katman hız sınırı için)
+BEKLEME = 13  # model çağrıları arası saniye (ücretsiz katman: dakikada 5 istek)
 
 # (no, kısa ad, hane) — tests/senaryolar.md ile aynı sırada
 SENARYOLAR = [

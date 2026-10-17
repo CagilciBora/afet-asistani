@@ -94,8 +94,9 @@ def call_llm(client, system: str, user: str, temperature: float, as_json: bool =
                 return json.loads(r.text) if as_json else r.text
             except Exception as e:  # noqa: BLE001
                 son_hata = e
-                if not any(k in str(e) for k in GECICI_HATALAR):
-                    raise  # kalıcı hata (anahtar, model adı, bozuk JSON): tekrar denemek işe yaramaz
+                # Bozuk JSON da geçicidir: değerlendirmede model bir kez virgülü eksik JSON döndürdü
+                if not (isinstance(e, json.JSONDecodeError) or any(k in str(e) for k in GECICI_HATALAR)):
+                    raise  # kalıcı hata (anahtar, model adı): tekrar denemek işe yaramaz
                 if "PerDay" in str(e) or "DEADLINE_EXCEEDED" in str(e) or not bekleme:
                     break  # kota doldu / model çok yavaş / denemeler bitti → varsa yedek modele geç
                 time.sleep(bekleme)

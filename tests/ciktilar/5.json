@@ -1,0 +1,185 @@
+{
+  "olcum": {
+    "ad": "2 yetişkin + 2 çocuk + kedi",
+    "model": "gemini-3.5-flash",
+    "kapsanan": 14,
+    "gerekli": 14,
+    "kodla_eklenen": [],
+    "gruplar": [
+      "cocuk"
+    ],
+    "eksik_grup": [],
+    "cot": true,
+    "isaret": []
+  },
+  "hane": "Hane: 2 yetişkin. Bebek: 0, çocuk: 2, yaşlı: 0, bunlardan hareket kısıtlı: 0. Düzenli ilaç: hayır. Evcil hayvan: evcil hayvan. Bina yapım yılı: 2000 öncesi. Kat: 1-3. kat. Binada çatlak/hasar: var.",
+  "ek_not": "Evcil hayvanımız bir kedi.",
+  "dikkat": [
+    "Bina 2000 öncesi yapılmış. Depreme dayanıklılığı için yetkili kurum/uzman incelemesi önerilir.",
+    "Binada çatlak/hasar gözlemlenmiş. Uzman incelemesi önceliklidir."
+  ],
+  "plan": {
+    "dusunce": "a) Hanede 2 çocuk ve 1 kedi var. Çocuklar için tatbikat yapılması, çantaya özel eşyalarının konulması; kedi için mama, su, taşıma çantası ve sağlık karnesi hazırlanması gerekiyor.\nb) Bina 2000 öncesi yapılmış ve çatlak/hasar var. Kesin yargıda bulunmadan yetkili bir mühendise inceletilmesi şart.\nc) AFAD rehberinden bina incelemesi, sabitleme, afet çantası, Çök-Kapan-Tutun ve tahliye kuralları öne çıkarılmalı.\nd) Tüm öneriler AFAD rehberiyle uyumlu ve güvenli bir dille sunuldu.",
+    "risk_ozeti": "Binanızın 2000 öncesi yapılmış olması ve mevcut çatlak/hasar bulunması nedeniyle yetkili bir inşaat mühendisi tarafından inceletilmesi önemlidir. Evdeki 2 çocuk ve kedinizin varlığı göz önünde bulundurularak afet öncesi planlama ve çanta hazırlığı titizlikle yapılmalıdır.",
+    "oncesi": [
+      "Binanızın güncel deprem yönetmeliğine uygunluğunu ve mevcut çatlakları yetkili bir uzmana/mühendise inceletin.",
+      "Evinizde çocuklarınız ve kediniz için gerekli malzemeleri de içeren kişisel afet ve acil durum çantaları hazırlayın.",
+      "Ağır mobilyaları, beyaz eşyaları ve düşebilecek eşyaları duvara/döşemeye sabitleyin.",
+      "Evin içinde ve dışında buluşma yerleri belirleyerek Aile Afet ve Acil Durum Planı yapın.",
+      "Çocuklarınızla birlikte evde Çök-Kapan-Tutun tatbikatı yapın.",
+      "Yatakların yanına su, düdük, fener ve ayakkabı yerleştirin.",
+      "Elektrik şalteri, su ve doğal gaz vanalarının yerini ve nasıl kapatılacağını öğrenin."
+    ],
+    "aninda": [
+      "Kesinlikle panik yapmayın ve sarsıntı anında binayı terk etmeye veya merdivenlere koşmaya çalışmayın.",
+      "Sağlam bir eşyanın yanında veya güvenli bir alanda ÇÖK - KAPAN - TUTUN pozisyonu alın.",
+      "Çocuklarınızın da panikle koşmasını önleyerek bulundukları yerde Çök-Kapan-Tutun yapmalarını sağlayın.",
+      "Pencerelerden, camlardan ve sabitlenmemiş ağır eşyalardan uzak durun.",
+      "Kedinizi sarsıntı anında yakalamaya çalışıp kendinizi riske atmayın; sarsıntı geçene kadar güvenli konumunuzu koruyun.",
+      "Mutfaktaysanız ocak ve fırın gibi cihazları kapatıp dökülebilecek maddelerden uzaklaşın."
+    ],
+    "sonrasi": [
+      "Sarsıntı tamamen durduğunda kendinizin, çocuklarınızın ve kedinizin emniyetinden emin olun ve ayakkabılarınızı giyin.",
+      "Elektrik, gaz ve su vanalarını kapatın; gaz kokusu varsa anahtarlara dokunmayın.",
+      "Kedinizi taşıma çantasına koyarak emniyete alın.",
+      "Afet ve acil durum çantalarınızı alarak önceden belirlediğiniz toplanma alanına gidin.",
+      "Artçı sarsıntılar bitene kadar hasarlı binaya kesinlikle geri girmeyin.",
+      "Acil durum ve yangın bildirimleri dışında telefon hatlarını meşgul etmeyin."
+    ],
+    "kisiye_ozel": [
+      {
+        "kim": "Çocuklar (2 birey)",
+        "ne_yapilmali": "Afet çantalarına yedek giysi, su ve psikolojik rahatlama sağlayacak sevdikleri bir oyuncağı ekleyin; deprem anında yapmaları gereken Çök-Kapan-Tutun hareketini oyunlaştırarak tatbikatla öğretin."
+      },
+      {
+        "kim": "Kedi (Evcil Hayvan)",
+        "ne_yapilmali": "Afet çantasına kedi maması, su, hekim onaylı gerekli malzemeler ve sağlık karnesini ekleyin; tahliye anında güvenle taşımak için kedi taşıma çantasını kolay ulaşılır bir yerde hazır bulundurun."
+      }
+    ]
+  },
+  "canta_ham": {
+    "kategoriler": [
+      {
+        "kategori": "Su ve gıda",
+        "esyalar": [
+          {
+            "esya": "içme suyu",
+            "miktar": "4 kişi için 3 günlük",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "konserve, kuru meyve, tahin-pekmez",
+            "miktar": "3 günlük",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "evcil hayvan maması ve su kabı",
+            "miktar": "3 günlük",
+            "kimin_icin": "evcil hayvan"
+          }
+        ]
+      },
+      {
+        "kategori": "Belgeler ve Para",
+        "esyalar": [
+          {
+            "esya": "kimlik, tapu, sigorta, DASK poliçesi fotokopileri",
+            "miktar": "1 dosya",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "evcil hayvan sağlık karnesi",
+            "miktar": "1 adet",
+            "kimin_icin": "evcil hayvan"
+          },
+          {
+            "esya": "nakit para",
+            "miktar": "yeterli miktarda",
+            "kimin_icin": "herkes"
+          }
+        ]
+      },
+      {
+        "kategori": "Giysi",
+        "esyalar": [
+          {
+            "esya": "iç çamaşırı, çorap, yağmurluk, mevsime uygun temiz giysi",
+            "miktar": "kişi başı 1 takım",
+            "kimin_icin": "herkes"
+          }
+        ]
+      },
+      {
+        "kategori": "İlk yardım",
+        "esyalar": [
+          {
+            "esya": "ilk yardım çantası ve malzemeleri",
+            "miktar": "1 adet",
+            "kimin_icin": "herkes"
+          }
+        ]
+      },
+      {
+        "kategori": "Hijyen",
+        "esyalar": [
+          {
+            "esya": "sabun, dezenfektan, diş fırçası ve macunu, ıslak mendil, tuvalet kâğıdı, hijyenik ped",
+            "miktar": "3 günlük",
+            "kimin_icin": "herkes"
+          }
+        ]
+      },
+      {
+        "kategori": "Diğer",
+        "esyalar": [
+          {
+            "esya": "düdük",
+            "miktar": "kişi başı 1 adet",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "el feneri ve uzun ömürlü yedek piller",
+            "miktar": "1 set",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "pilli radyo",
+            "miktar": "1 adet",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "battaniye veya uyku tulumu",
+            "miktar": "kişi başı 1 adet",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "çok amaçlı çakı ve küçük makas",
+            "miktar": "1 adet",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "kâğıt ve kalem",
+            "miktar": "1 set",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "çöp poşeti",
+            "miktar": "1 paket",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "afet ve acil durum aile planı",
+            "miktar": "1 adet",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "evcil hayvan taşıma çantası ve tasması",
+            "miktar": "1 adet",
+            "kimin_icin": "evcil hayvan"
+          }
+        ]
+      }
+    ]
+  },
+  "sade_cocuk": "Deprem öncesinde acil durum çantana en sevdiğin oyuncağı, yedek kıyafetlerini ve suyunu koyabilirsin. Yatağının kenarında her zaman fener, düdük ve ayakkabıların hazır durmalı. Deprem anında yapman gerekenleri harika bir koruma oyunu gibi düşünebilirsin: Çök, Kapan ve Tutun! Sallantı başlayınca sağlam bir eşyanın yanına çöküp başını koruyarak kapanıyor ve sımsıkı tutunuyorsun. Bu sırada hiç panik yapmadan, pencerelerden uzak durarak olduğun yerde beklemen gerekir. Kedimizi yakalamak için peşinden koşmayıp sarsıntının bitmesini sakince beklemelisin. Sarsıntı tamamen durduğunda ayakkabılarını giyebilir ve kedimizi taşıma çantasına koyabilirsin. Sonra acil durum çantanı alarak ailenle belirlediğiniz güvenli buluşma yerine gidebilirsin."
+}

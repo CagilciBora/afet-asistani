@@ -39,7 +39,10 @@ class SahteModel:
     def generate_content(self, model, contents, config):
         self.cagrilar.append(model)
         if self.hatalar:
-            raise RuntimeError(self.hatalar.pop(0))
+            hata = self.hatalar.pop(0)
+            if hata == "BOZUK_JSON":
+                return type("Cevap", (), {"text": '{"ok": true'})()
+            raise RuntimeError(hata)
         return type("Cevap", (), {"text": '{"ok": true}'})()
 
 
@@ -71,6 +74,11 @@ class ModelCagrisi(unittest.TestCase):
         with patch.dict(os.environ, {"GEMINI_YEDEK_MODEL": ""}), self.assertRaises(RuntimeError):
             logic.call_llm(client, "s", "u", 0)
         self.assertEqual(client.cagrilar, ["ana"] * 3)
+
+    def test_bozuk_json_tekrar_denenir(self, _):
+        client = SahteModel("BOZUK_JSON")
+        self.assertEqual(logic.call_llm(client, "s", "u", 0), {"ok": True})
+        self.assertEqual(client.cagrilar, ["ana", "ana"])
 
     def test_kalici_hata_tekrar_denenmez(self, _):
         client = SahteModel("400 API key not valid")

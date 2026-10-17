@@ -1,0 +1,170 @@
+{
+  "olcum": {
+    "ad": "2 yetişkin + tekerlekli sandalye",
+    "model": "gemini-3.5-flash",
+    "kapsanan": 12,
+    "gerekli": 12,
+    "kodla_eklenen": [],
+    "gruplar": [
+      "hareket_kisitli"
+    ],
+    "eksik_grup": [],
+    "cot": true,
+    "isaret": []
+  },
+  "hane": "Hane: 3 yetişkin. Bebek: 0, çocuk: 0, yaşlı: 0, bunlardan hareket kısıtlı: 1. Düzenli ilaç: hayır. Evcil hayvan: yok. Bina yapım yılı: 2000-2018. Kat: 1-3. kat. Binada çatlak/hasar: yok.",
+  "ek_not": "Evde tekerlekli sandalye kullanan biri var, merdiven dar.",
+  "dikkat": [
+    "Hanede tahliyede yardıma ihtiyaç duyabilecek birey var; kimin kime yardım edeceği önceden belirlenmeli."
+  ],
+  "plan": {
+    "dusunce": "a) Hanede 1 tekerlekli sandalye kullanan hareket kısıtlı birey bulunmaktadır; deprem anında sandalye tekerleklerini kilitleyip başını korumalı, tahliye sırasında ise dar merdivenler nedeniyle önceden belirlenmiş bir yetişkinin desteğine ihtiyaç duymaktadır. b) Bina 2000-2018 yılları arasında yapılmış ve 1-3. katlar arasında yer almaktadır, dar merdivenler tahliye yollarının her zaman açık tutulmasını gerektirmektedir. c) AFAD rehberinden tekerlekli sandalye güvenliği, tahliye planlaması, acil durum çantası hazırlığı ve bina güvenliği incelemesi maddeleri öne çıkarılmıştır. d) Tüm maddelerin AFAD rehberindeki kurallara tam uyumu sağlanmıştır.",
+    "risk_ozeti": "Hanenizde hareket kısıtlı bir bireyin bulunması ve merdivenlerin dar olması, deprem anı ve sonrasındaki tahliye adımlarının önceden planlanmasını kritik kılmaktadır. Binanızda gözle görülür bir hasar olmasa da kesin güvenlik değerlendirmesi için yetkili uzman incelemesi en sağlıklı yaklaşımdır. Doğru bir acil durum planı ve hazırlıkla riskleri en aza indirebilirsiniz.",
+    "oncesi": [
+      "Aile afet ve acil durum planı yaparak tahliye sırasında hareket kısıtlı bireye kimin yardım edeceğini ve görev dağılımını önceden belirleyin.",
+      "Dar merdivenleri ve çıkış yollarını kapatabilecek tüm eşyaları kaldırarak tahliye yolunu her zaman açık tutun.",
+      "Her aile üyesi için ayrı bir afet ve acil durum çantası hazırlayın; çantanıza su, dayanıklı gıdalar, ilk yardım malzemeleri ve önemli evrak fotokopilerini koyun.",
+      "Ağır mobilyaları, beyaz eşyaları ve elektronik cihazları duvara veya döşemeye sabitleyin.",
+      "Yatakların yanına su, düdük, fener ve ayakkabı yerleştirin.",
+      "Evinizde yangın söndürücü bulundurun; elektrik şalteri, su ve doğal gaz vanalarının yerini ve kapatılma şeklini öğrenin.",
+      "Binanızın güncel deprem yönetmeliğine uygunluğunu öğrenin; şüpheniz varsa yetkili bir mühendise inceletin."
+    ],
+    "aninda": [
+      "Sarsıntı başladığında kesinlikle panik yapmayın ve olduğunuz yerde kalın.",
+      "Tekerlekli sandalyedeki birey tekerlekleri kilitlemeli, baş ve boyun bölgesini elleriyle veya bir yastıkla korumalıdır.",
+      "Diğer bireyler sağlam bir eşyanın yanında ÇÖK - KAPAN - TUTUN pozisyonu almalıdır.",
+      "Pencerelerden, dış duvardan ve sabitlenmemiş ağır eşyalardan uzak durun.",
+      "Sarsıntı sırasında kesinlikle merdivenlere koşmayın, balkona çıkmayın ve asansör kullanmayın.",
+      "Mutfaktaysanız ocak ve fırın gibi cihazları kapatıp dökülebilecek maddelerden uzaklaşın."
+    ],
+    "sonrasi": [
+      "Sarsıntı tamamen bittiğinde ayakkabılarınızı giyin ve yaralanma kontrolü yapın.",
+      "Elektrik, gaz ve su vanalarını kapatın; gaz kokusu hissederseniz camları açıp hemen binayı terk edin.",
+      "Daha önce belirlediğiniz plan doğrultusunda, dar merdivenlerden dikkatlice ve yardımlaşarak binayı terk edin.",
+      "Afet ve acil durum çantanızı alarak önceden belirlenen toplanma bölgesine gidin.",
+      "Artçı depremlere karşı hazırlıklı olun; sarsıntılar bitene kadar hasarlı binalara girmeyin.",
+      "Acil durumlar dışında telefon hatlarını meşgul etmeyin."
+    ],
+    "kisiye_ozel": [
+      {
+        "kim": "Tekerlekli sandalye kullanan hareket kısıtlı birey",
+        "ne_yapilmali": "Sarsıntı anında tekerlekli sandalyenin tekerlekleri derhal kilitlenmeli, baş ve boyun bölgesi korunmalıdır. Tahliye sırasında dar merdivenlerde güvenli iniş için önceden görevlendirilen yetişkin birey eşlik etmelidir."
+      }
+    ]
+  },
+  "canta_ham": {
+    "kategoriler": [
+      {
+        "kategori": "Su ve gıda",
+        "esyalar": [
+          {
+            "esya": "içme suyu",
+            "miktar": "3 kişi için 3 günlük",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "konserve, kuru meyve, tahin-pekmez gibi dayanıklı gıdalar",
+            "miktar": "3 günlük",
+            "kimin_icin": "herkes"
+          }
+        ]
+      },
+      {
+        "kategori": "Belgeler ve Para",
+        "esyalar": [
+          {
+            "esya": "kimlik, tapu, DASK poliçesi, ruhsat ve sigorta fotokopileri",
+            "miktar": "1 dosya",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "nakit para",
+            "miktar": "yeterli miktarda",
+            "kimin_icin": "herkes"
+          }
+        ]
+      },
+      {
+        "kategori": "Giysi",
+        "esyalar": [
+          {
+            "esya": "iç çamaşırı, çorap, yağmurluk ve mevsime uygun temiz giysi",
+            "miktar": "kişi başı 1 takım",
+            "kimin_icin": "herkes"
+          }
+        ]
+      },
+      {
+        "kategori": "İlk yardım ve Özel İhtiyaçlar",
+        "esyalar": [
+          {
+            "esya": "ilk yardım çantası",
+            "miktar": "1 adet",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "hareket kısıtlı birey için gerekli yardımcı gereçler ve destek malzemeleri",
+            "miktar": "1 set",
+            "kimin_icin": "hareket kısıtlı birey"
+          }
+        ]
+      },
+      {
+        "kategori": "Hijyen",
+        "esyalar": [
+          {
+            "esya": "sabun, dezenfektan, diş fırçası ve macunu, ıslak mendil, tuvalet kâğıdı, hijyenik ped",
+            "miktar": "3 günlük",
+            "kimin_icin": "herkes"
+          }
+        ]
+      },
+      {
+        "kategori": "Diğer",
+        "esyalar": [
+          {
+            "esya": "düdük",
+            "miktar": "kişi başı 1 adet",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "el feneri ve dayanıklı yedek piller",
+            "miktar": "1 set",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "pilli radyo",
+            "miktar": "1 adet",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "battaniye veya uyku tulumu",
+            "miktar": "kişi başı 1 adet",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "çok amaçlı çakı ve küçük makas",
+            "miktar": "1 adet",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "kâğıt ve kalem",
+            "miktar": "1 set",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "çöp poşeti",
+            "miktar": "1 paket",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "afet ve acil durum aile planı",
+            "miktar": "1 adet",
+            "kimin_icin": "herkes"
+          }
+        ]
+      }
+    ]
+  },
+  "sade_cocuk": null
+}
