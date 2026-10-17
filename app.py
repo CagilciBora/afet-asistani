@@ -10,8 +10,9 @@ load_dotenv()
 st.set_page_config(page_title="Afet Hazırlık Asistanı", page_icon="🧭", layout="centered")
 
 st.title("🧭 Afet Hazırlık Asistanı")
-st.caption("Hanenize özel deprem hazırlık planı ve afet çantası listesi. "
-           "SDG 11.5 ve 13.1: Afetlerde can kaybını azaltmak, dayanıklılığı artırmak.")
+st.caption("Hanenize özel deprem hazırlık planı ve afet çantası listesi.")
+
+sade_alani = st.container()
 
 # ---------------- Girdi formu ----------------
 with st.form("hane"):
@@ -20,11 +21,11 @@ with st.form("hane"):
     yetiskin = c1.number_input("Yetişkin (13-64)", 0, 10, 2)
     cocuk = c2.number_input("Çocuk (3-12)", 0, 10, 0)
     bebek = c3.number_input("Bebek (0-2)", 0, 5, 0)
-    c4, c5 = st.columns(2)
-    yasli = c4.number_input("Yaşlı (65+)", 0, 10, 0)
-    hareket = c5.number_input("Hareket kısıtlı birey", 0, 10, 0)
+    st.markdown("#### Yaşlı bireyler")
+    yasli = st.number_input("65 yaş ve üzeri kişi sayısı", 0, 10, 0)
+    hareket = st.number_input("Hareket kısıtlı birey", 0, 10, 0)
     ilac = st.checkbox("Hanede düzenli ilaç kullanan biri var (hangi ilaç olduğunu yazmanıza gerek yok)")
-    evcil = st.text_input("Evcil hayvan (yoksa boş bırakın)", placeholder="ör. kedi")
+    evcil = st.radio("Evcil hayvan var mı?", ["Evet", "Hayır"], index=1, horizontal=True)
 
     st.subheader("Binanız")
     c6, c7 = st.columns(2)
@@ -37,7 +38,8 @@ with st.form("hane"):
 
 if gonder:
     h = logic.Hane(yetiskin=yetiskin, bebek=bebek, cocuk=cocuk, yasli=yasli, hareket_kisitli=hareket,
-                   ilac=ilac, evcil=evcil.strip() or "yok", bina_yili=bina_yili, kat=kat, catlak=catlak, ek_not=ek_not)
+                   ilac=ilac, evcil="evcil hayvan" if evcil == "Evet" else "yok",
+                   bina_yili=bina_yili, kat=kat, catlak=catlak, ek_not=ek_not)
     if h.toplam == 0:
         st.warning("En az bir kişi girin.")
         st.stop()
@@ -54,13 +56,25 @@ if gonder:
         st.error(f"Model cevabı alınamadı, tekrar deneyin. ({e})")
         st.stop()
 
-    kapsanan, gerekli = logic.kapsama_orani(canta_ham, h)
-    canta, eksikler = logic.eksikleri_tamamla(copy.deepcopy(canta_ham), h)
-    st.session_state.update(h=h, plan=plan, canta=canta, eksikler=eksikler, kapsama=(kapsanan, gerekli), sade=None)
+    canta, _ = logic.eksikleri_tamamla(copy.deepcopy(canta_ham), h)
+    st.session_state.update(h=h, plan=plan, canta=canta, sade=None)
 
 # ---------------- Sonuçlar ----------------
 if "plan" in st.session_state:
     h, plan, canta = st.session_state.h, st.session_state.plan, st.session_state.canta
+
+    with sade_alani:
+        st.subheader("Sade anlatım")
+        secenekler = ["genel"] + (["çocuk"] if h.cocuk else []) + (["yaşlı"] if h.yasli else [])
+        kime = st.radio("Kime anlatılsın?", secenekler, horizontal=True)
+        if st.button("Sade anlat"):
+            try:
+                with st.spinner("Hazırlanıyor..."):
+                    st.session_state.sade = logic.sade_anlat(logic.get_client(), plan, kime)
+            except Exception as e:  # noqa: BLE001
+                st.error(f"Sade anlatım hazırlanamadı, tekrar deneyin. ({e})")
+        if st.session_state.get("sade"):
+            st.success(st.session_state.sade)
 
     dikkat = logic.dikkat_noktalari(h)
     if dikkat:
@@ -71,8 +85,6 @@ if "plan" in st.session_state:
 
     st.subheader("Planınız")
     st.info(plan.get("risk_ozeti", ""))
-    with st.expander("Asistanın düşünme adımları (chain-of-thought)"):
-        st.write(plan.get("dusunce", "—"))
 
     t1, t2, t3 = st.tabs(["Deprem öncesi", "Deprem anında", "Deprem sonrası"])
     for tab, anahtar in [(t1, "oncesi"), (t2, "aninda"), (t3, "sonrasi")]:
@@ -84,23 +96,10 @@ if "plan" in st.session_state:
             st.markdown(f"- **{k.get('kim')}**: {k.get('ne_yapilmali')}")
 
     st.subheader("Afet ve acil durum çantası (72 saat)")
-    kapsanan, gerekli = st.session_state.kapsama
-    st.metric("Zorunlu eşya kapsaması (model)", f"{kapsanan} / {gerekli}")
-    if st.session_state.eksikler:
-        st.error("Model şu zorunlu eşyaları atladı; kontrol sistemi ekledi: " + ", ".join(st.session_state.eksikler))
     for k in canta.get("kategoriler", []):
         with st.expander(k.get("kategori", ""), expanded=True):
             st.markdown("\n".join(f"- {e.get('esya')} — {e.get('miktar') or '-'} *({e.get('kimin_icin') or '-'})*"
                                   for e in k.get("esyalar", [])))
-
-    st.subheader("Sade anlatım")
-    secenekler = ["genel"] + (["çocuk"] if h.cocuk else []) + (["yaşlı"] if h.yasli else [])
-    kime = st.radio("Kime anlatılsın?", secenekler, horizontal=True)
-    if st.button("Sade anlat"):
-        with st.spinner("Hazırlanıyor..."):
-            st.session_state.sade = logic.sade_anlat(logic.get_client(), plan, kime)
-    if st.session_state.get("sade"):
-        st.success(st.session_state.sade)
 
     st.download_button("📄 Planı indir (yazdırılabilir)", logic.markdown_cikti(h, plan, canta),
                        file_name="afet_plani.md", mime="text/markdown")

@@ -83,7 +83,7 @@ def hane_metni(h: Hane) -> str:
             f"Binada çatlak/hasar: {'var' if h.catlak else 'yok'}.")
 
 
-# ADIM 1 — Kişisel plan: rol + chain-of-thought + RAG (AFAD rehberi prompt'a eklenir)
+# ADIM 1 — Kişisel plan: rol + RAG (AFAD rehberi prompt'a eklenir)
 def plan_uret(client, h: Hane) -> dict:
     user = (f"AFAD REHBERİ:\n{oku('data/afad_rehber.txt')}\n\n"
             f"HANE BİLGİSİ:\n{hane_metni(h)}\n\n"
@@ -100,7 +100,8 @@ def canta_uret(client, h: Hane) -> dict:
 
 # ADIM 3 — Sade anlatım: zero-shot
 def sade_anlat(client, plan: dict, kime: str) -> str:
-    user = f"KİŞİ: {kime}\n\nPLAN:\n{json.dumps(plan, ensure_ascii=False)}"
+    sonuc = {k: plan[k] for k in ("risk_ozeti", "oncesi", "aninda", "sonrasi", "kisiye_ozel") if k in plan}
+    user = f"KİŞİ: {kime}\n\nPLAN:\n{json.dumps(sonuc, ensure_ascii=False)}"
     return call_llm(client, oku("prompts/3_sade_anlatim.md"), user, temperature=0.5, as_json=False)
 
 
@@ -156,7 +157,7 @@ def eksikleri_tamamla(canta: dict, h: Hane) -> tuple[dict, list[str]]:
     eksik = [ad for ad, kws in TEMEL_ESYALAR + kosullu_esyalar(h) if not _var_mi(metin, kws)]
     if eksik:
         canta.setdefault("kategoriler", []).append({
-            "kategori": "⚠️ Kontrolle eklenenler (model atlamıştı)",
+            "kategori": "Ek ihtiyaçlar",
             "esyalar": [{"esya": e, "miktar": "-", "kimin_icin": "-"} for e in eksik],
         })
     return canta, eksik
