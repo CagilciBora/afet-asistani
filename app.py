@@ -1,5 +1,6 @@
 """Afet Hazırlık Asistanı — Streamlit arayüzü.  Çalıştırma: streamlit run app.py"""
 import copy
+from concurrent.futures import ThreadPoolExecutor
 
 import streamlit as st
 from dotenv import load_dotenv
@@ -23,7 +24,7 @@ with st.form("hane"):
     bebek = c3.number_input("Bebek (0-2)", 0, 5, 0)
     st.markdown("#### Yaşlı bireyler")
     yasli = st.number_input("65 yaş ve üzeri kişi sayısı", 0, 10, 0)
-    hareket = st.number_input("Hareket kısıtlı birey", 0, 10, 0)
+    hareket = st.number_input("Bunlardan hareket kısıtlı olan (yukarıdaki kişilere dahil)", 0, 10, 0)
     ilac = st.checkbox("Hanede düzenli ilaç kullanan biri var (hangi ilaç olduğunu yazmanıza gerek yok)")
     evcil = st.radio("Evcil hayvan var mı?", ["Evet", "Hayır"], index=1, horizontal=True)
 
@@ -33,7 +34,7 @@ with st.form("hane"):
     kat = c7.selectbox("Oturduğunuz kat", ["Zemin / bahçe katı", "1-3. kat", "4. kat ve üstü"])
     catlak = st.checkbox("Binada gözle görülür çatlak veya hasar var")
     ek_not = st.text_area("Eklemek istediğiniz bir şey (isteğe bağlı)", max_chars=300,
-                          placeholder="ör. Evde tekerlekli sandalye kullanan biri var, merdiven dar.")
+                          placeholder="ör. Evde tekerlekli sandalye kullanan biri var, merdiven dar. (Ad, adres, sağlık bilgisi yazmayın.)")
     gonder = st.form_submit_button("Planımı hazırla", type="primary")
 
 if gonder:
@@ -43,17 +44,21 @@ if gonder:
     if h.toplam == 0:
         st.warning("En az bir kişi girin.")
         st.stop()
+    if h.hareket_kisitli > h.toplam:
+        st.warning("Hareket kısıtlı kişi sayısı, hanedeki toplam kişi sayısından fazla olamaz.")
+        st.stop()
     try:
         client = logic.get_client()
-        with st.spinner("Plan hazırlanıyor..."):
-            plan = logic.plan_uret(client, h)
-        with st.spinner("Çanta listesi hazırlanıyor..."):
-            canta_ham = logic.canta_uret(client, h)
+        # Plan ve çanta birbirinden bağımsız: iki model çağrısı paralel yapılır, bekleme süresi yarıya iner
+        with st.spinner("Plan ve çanta listesi hazırlanıyor..."), ThreadPoolExecutor(max_workers=2) as havuz:
+            plan_is = havuz.submit(logic.plan_uret, client, h)
+            canta_is = havuz.submit(logic.canta_uret, client, h)
+            plan, canta_ham = plan_is.result(), canta_is.result()
     except RuntimeError as e:
         st.error(str(e))
         st.stop()
     except Exception as e:  # noqa: BLE001
-        st.error(f"Model cevabı alınamadı, tekrar deneyin. ({e})")
+        st.error(logic.hata_mesaji(e))
         st.stop()
 
     canta, _ = logic.eksikleri_tamamla(copy.deepcopy(canta_ham), h)
@@ -72,7 +77,7 @@ if "plan" in st.session_state:
                 with st.spinner("Hazırlanıyor..."):
                     st.session_state.sade = logic.sade_anlat(logic.get_client(), plan, kime)
             except Exception as e:  # noqa: BLE001
-                st.error(f"Sade anlatım hazırlanamadı, tekrar deneyin. ({e})")
+                st.error(logic.hata_mesaji(e))
         if st.session_state.get("sade"):
             st.success(st.session_state.sade)
 
@@ -106,4 +111,5 @@ if "plan" in st.session_state:
 
 st.divider()
 st.caption("Bu araç AFAD rehberine dayanarak yapay zekâ ile plan önerir; hatalı olabilir ve resmî kurumların yerini tutmaz. "
-           "Acil durumda 112'yi arayın. Adres, kimlik ya da hastalık bilgisi istenmez; girdiğiniz bilgiler kaydedilmez.")
+           "Acil durumda 112'yi arayın. Adres, kimlik ya da hastalık bilgisi istenmez. Bilgileriniz bu uygulamada "
+           "saklanmaz; plan oluşturmak için Google Gemini'ye gönderilir. Ek not alanına ad, adres veya sağlık bilgisi yazmayın.")

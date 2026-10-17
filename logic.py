@@ -3,10 +3,11 @@ Arayüz app.py'de; burada sadece iş mantığı var."""
 import json
 import os
 import re
+import time
 from dataclasses import dataclass
 from pathlib import Path
 
-MODEL = "gemini-3.8-flash"
+MODEL = "gemini-3.8-flash"  # .env içinde GEMINI_MODEL ile değiştirilebilir (günlük kota dolarsa)
 ROOT = Path(__file__).parent
 
 
@@ -16,7 +17,7 @@ class Hane:
     bebek: int = 0          # 0-2 yaş
     cocuk: int = 0          # 3-12 yaş
     yasli: int = 0          # 65+
-    hareket_kisitli: int = 0
+    hareket_kisitli: int = 0  # yukarıdaki yaş gruplarına dahil (ayrıca sayılmaz)
     ilac: bool = False      # düzenli ilaç kullanan var mı (hangi ilaç / hastalık SORULMAZ)
     evcil: str = "yok"
     bina_yili: str = "Bilmiyorum"   # "2000 öncesi" | "2000-2018" | "2018 sonrası" | "Bilmiyorum"
@@ -65,6 +66,14 @@ def get_client():
     return genai.Client(api_key=key)
 
 
+def model_adi() -> str:
+    return os.getenv("GEMINI_MODEL") or MODEL
+
+
+# Sunucu yoğunluğu / kota gibi geçici hatalar: tekrar denemek ya da yedek modele geçmek işe yarar
+GECICI_HATALAR = ("503", "UNAVAILABLE", "500", "INTERNAL", "429", "RESOURCE_EXHAUSTED")
+
+
 def call_llm(client, system: str, user: str, temperature: float, as_json: bool = True):
     from google.genai import types
     cfg = types.GenerateContentConfig(
@@ -72,13 +81,35 @@ def call_llm(client, system: str, user: str, temperature: float, as_json: bool =
         temperature=temperature,
         response_mime_type="application/json" if as_json else "text/plain",
     )
-    r = client.models.generate_content(model=MODEL, contents=user, config=cfg)
-    return json.loads(r.text) if as_json else r.text
+    modeller = [model_adi()] + [m for m in [os.getenv("GEMINI_YEDEK_MODEL")] if m]
+    son_hata = None
+    for model in modeller:
+        for bekleme in (2, 5, 0):
+            try:
+                r = client.models.generate_content(model=model, contents=user, config=cfg)
+                return json.loads(r.text) if as_json else r.text
+            except Exception as e:  # noqa: BLE001
+                son_hata = e
+                if not any(k in str(e) for k in GECICI_HATALAR):
+                    raise  # kalıcı hata (anahtar, model adı, bozuk JSON): tekrar denemek işe yaramaz
+                if "PerDay" in str(e) or not bekleme:
+                    break  # günlük kota doldu ya da denemeler bitti → varsa yedek modele geç
+                time.sleep(bekleme)
+    raise son_hata
+
+
+def hata_mesaji(e: Exception) -> str:
+    """Model hatasını kullanıcının anlayacağı bir cümleye çevirir."""
+    if "PerDay" in str(e):
+        return "Günlük ücretsiz model kotası doldu. .env içinde GEMINI_MODEL ile başka bir model seçin ya da yarın deneyin."
+    if any(k in str(e) for k in ("503", "UNAVAILABLE", "429")):
+        return "Model şu an çok yoğun (Google tarafında geçici bir sorun). Birkaç saniye sonra tekrar deneyin."
+    return f"Model cevabı alınamadı, tekrar deneyin. ({e})"
 
 
 def hane_metni(h: Hane) -> str:
     return (f"Hane: {h.yetiskin} yetişkin. Bebek: {h.bebek}, çocuk: {h.cocuk}, yaşlı: {h.yasli}, "
-            f"hareket kısıtlı: {h.hareket_kisitli}. Düzenli ilaç: {'evet' if h.ilac else 'hayır'}. "
+            f"bunlardan hareket kısıtlı: {h.hareket_kisitli}. Düzenli ilaç: {'evet' if h.ilac else 'hayır'}. "
             f"Evcil hayvan: {h.evcil or 'yok'}. Bina yapım yılı: {h.bina_yili}. Kat: {h.kat}. "
             f"Binada çatlak/hasar: {'var' if h.catlak else 'yok'}.")
 
@@ -128,13 +159,16 @@ TEMEL_ESYALAR = [
 def kosullu_esyalar(h: Hane) -> list[tuple[str, list[str]]]:
     k = []
     if h.bebek:
-        k += [("bebek maması", ["mama"]), ("bebek bezi", ["bez"])]
+        k += [("bebek maması", ["bebek maması", "bebek için mama", "formül mama"]), ("bebek bezi", ["bez"])]
     if h.ilac:
         k += [("kişisel ilaçlar (7 günlük)", ["ilaç"])]
     if h.yasli:
         k += [("yedek gözlük / yardımcı araçlar", ["gözlük", "baston", "işitme"])]
     if h.evcil and tr_lower(h.evcil) != "yok":
-        k += [(f"{h.evcil} için mama ve su", ["mama"]), (f"{h.evcil} taşıma çantası / tasma", ["taşıma", "tasma"])]
+        # "mama" tek başına bebek mamasıyla da eşleşir; hayvana özel ifadeler aranır
+        mama = [f"{h.evcil} maması", f"{h.evcil} için mama", "hayvan maması", "hayvan için mama",
+                "kedi maması", "köpek maması", "kuş yemi"]
+        k += [(f"{h.evcil} için mama ve su", mama), (f"{h.evcil} taşıma çantası / tasma", ["taşıma", "tasma"])]
     return k
 
 
@@ -155,7 +189,7 @@ def _var_mi(metin: str, kelimeler: list[str]) -> bool:
 
 
 def eksikleri_tamamla(canta: dict, h: Hane) -> tuple[dict, list[str]]:
-    """Modelin unuttuğu zorunlu eşyaları bulur ve 'Kontrolle eklenenler' kategorisine ekler."""
+    """Modelin unuttuğu zorunlu eşyaları bulur ve 'Ek ihtiyaçlar' kategorisine ekler."""
     metin = _esya_metni(canta)
     eksik = [ad for ad, kws in TEMEL_ESYALAR + kosullu_esyalar(h) if not _var_mi(metin, kws)]
     if eksik:
