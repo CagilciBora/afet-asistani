@@ -11,13 +11,13 @@ Hane bilgilerine (kişi sayısı, bebek / çocuk / yaşlı / hareket kısıtlı 
 | Adım | Ne yapar | Teknik | Prompt |
 |---|---|---|---|
 | 0 | Bina yaşı, çatlak, kat ve kırılgan birey için **kesin kurallı uyarılar** | Kod (LLM yok) | — |
-| 1 | Kişisel plan: öncesi / anında / sonrası + kişiye özel | Rol + **chain-of-thought** + **RAG** (AFAD rehberi prompt'a eklenir) | `prompts/1_plan.md` |
-| 2 | Afet çantası listesi | **Few-shot** (2 örnek) | `prompts/2_canta.md` |
+| 1 | Kişisel plan: öncesi / anında / sonrası + kişiye özel | Rol + **RAG** (AFAD rehberi prompt'a eklenir) | `prompts/1_plan.md` |
+| 2 | Afet çantası listesi | **Few-shot** (2 örnek) + **RAG** (AFAD rehberi prompt'a eklenir) | `prompts/2_canta.md` |
 | 3 | Çocuğa / yaşlıya sade anlatım | **Zero-shot** | `prompts/3_sade_anlatim.md` |
 | 4 | Çantada zorunlu eşya kontrolü ve eksik tamamlama | Kod (LLM yok) | — |
 
-Model: Google Gemini 2.5 Flash. Temperature: plan ve çanta için 0.2 (tutarlılık), sade anlatım için 0.5.
-Kaynak: `data/afad_rehber.txt` (AFAD rehberinden derlendi).
+Model: Google Gemini 3.8 Flash. Temperature: plan ve çanta için 0.2 (tutarlılık), sade anlatım için 0.5.
+Kaynak: `data/afad_rehber.txt` (her madde afad.gov.tr sayfalarına dayanır; kaynaklar dosyanın başında).
 
 ## Çalıştırma
 

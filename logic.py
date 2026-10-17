@@ -6,7 +6,7 @@ import re
 from dataclasses import dataclass
 from pathlib import Path
 
-MODEL = "gemini-2.5-flash"
+MODEL = "gemini-3.8-flash"
 ROOT = Path(__file__).parent
 
 
@@ -45,11 +45,11 @@ def dikkat_noktalari(h: Hane) -> list[str]:
     if h.bina_yili == "2000 öncesi":
         d.append("Bina 2000 öncesi yapılmış. Depreme dayanıklılığı için yetkili kurum/uzman incelemesi önerilir.")
     if h.bina_yili == "Bilmiyorum":
-        d.append("Binanın yapım yılı bilinmiyor; tapu veya belediyeden öğrenilmesi önerilir.")
+        d.append("Binanın yapım yılı bilinmiyor; güncel deprem yönetmeliğine göre yapılıp yapılmadığının öğrenilmesi önerilir.")
     if h.catlak:
         d.append("Binada çatlak/hasar gözlemlenmiş. Uzman incelemesi önceliklidir.")
     if h.kat == "4. kat ve üstü":
-        d.append("Üst kat: deprem anında merdivene/balkona koşmayın, sarsıntı bitince merdivenle inin.")
+        d.append("Üst kat: deprem anında merdivene/balkona koşmayın, asansör kullanmayın; sarsıntı bitince binayı önceden belirlenen yoldan terk edin.")
     if h.bebek or h.yasli or h.hareket_kisitli:
         d.append("Hanede tahliyede yardıma ihtiyaç duyabilecek birey var; kimin kime yardım edeceği önceden belirlenmeli.")
     return d
@@ -92,9 +92,10 @@ def plan_uret(client, h: Hane) -> dict:
     return call_llm(client, oku("prompts/1_plan.md"), user, temperature=0.2)
 
 
-# ADIM 2 — Çanta listesi: few-shot
+# ADIM 2 — Çanta listesi: few-shot + RAG (AFAD rehberi prompt'a eklenir)
 def canta_uret(client, h: Hane) -> dict:
-    user = f"Girdi: {hane_metni(h)}\nÇıktı:"
+    user = (f"AFAD REHBERİ:\n{oku('data/afad_rehber.txt')}\n\n"
+            f"Girdi: {hane_metni(h)}\nÇıktı:")
     return call_llm(client, oku("prompts/2_canta.md"), user, temperature=0.2)
 
 
@@ -119,6 +120,8 @@ TEMEL_ESYALAR = [
     ("pilli radyo", ["radyo"]),
     ("battaniye / uyku tulumu", ["battaniye", "uyku tulumu"]),
     ("hijyen malzemeleri", ["sabun", "ıslak mendil", "dezenfektan", "tuvalet"]),
+    ("para", ["para", "nakit"]),
+    ("çöp poşeti", ["çöp"]),
 ]
 
 
@@ -127,7 +130,7 @@ def kosullu_esyalar(h: Hane) -> list[tuple[str, list[str]]]:
     if h.bebek:
         k += [("bebek maması", ["mama"]), ("bebek bezi", ["bez"])]
     if h.ilac:
-        k += [("düzenli ilaçlar ve reçete kopyası", ["ilaç"])]
+        k += [("kişisel ilaçlar (7 günlük)", ["ilaç"])]
     if h.yasli:
         k += [("yedek gözlük / yardımcı araçlar", ["gözlük", "baston", "işitme"])]
     if h.evcil and tr_lower(h.evcil) != "yok":

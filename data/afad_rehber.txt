@@ -1,41 +1,77 @@
 AFAD REHBER ÖZETİ — MODELE VERİLEN GÜVENİLİR KAYNAK
-(Ekip notu: Bu metni teslimden önce afad.gov.tr'deki "Deprem Öncesi, Anı ve Sonrası Önlemini Al, Güvende Kal" sayfasıyla tarayıcıda karşılaştırıp doğrulayın.)
+Her madde aşağıdaki AFAD sayfalarından birebir ya da çok yakın ifadeyle alınmıştır; köşeli parantez kaynağı gösterir.
+[K1] afad.gov.tr — Deprem Öncesi, Anı ve Sonrası Önlemini Al, Güvende Kal (19.03.2018)
+[K2] afad.gov.tr — Deprem Anında Neler Yapmalısınız? (28.02.2018)
+[K3] afad.gov.tr — Afet ve acil durum çantasında olması gerekenler (afiş)
+[K4] bolu.afad.gov.tr — Afet ve Acil Durum Çantası Nasıl Hazırlanmalı?
+[K5] kirsehir.afad.gov.tr — Aile Afet ve Acil Durum Planı
+(Doğrulama tarihi: 17.10.2026)
 
 1) AFET VE ACİL DURUM ÇANTASI
-- Amaç: Afetten sonraki ilk 72 saati karşılamak.
-- Kolay ulaşılabilir bir yerde durmalı. Sadece evde değil, iş yerinde ve okulda da bulundurulmalı.
-- Su: Her aile üyesi düşünülerek yeterli içme suyu.
-- Gıda: Yüksek kalorili, vitamin ve karbonhidrat içeren, dayanıklı, su kaybını önlemeye yardımcı yiyecekler (konserve, kuru meyve, tahin-pekmez, meyve suyu gibi).
-- Önemli belgelerin fotokopileri: Kimlik, tapu, sigorta ve ruhsat belgeleri, Zorunlu Deprem Sigortası (DASK) poliçesi, diploma, pasaport, banka kartı bilgileri, evcil hayvan sağlık karnesi.
-- Giysi: İç çamaşırı, çorap, yağmurluk, mevsime uygun kıyafet.
-- İlk yardım çantası.
-- Hijyen malzemeleri: Sabun ve dezenfektan, diş fırçası ve macunu, ıslak mendil, tuvalet kâğıdı, hijyenik ped.
-- Diğer: Uyku tulumu veya battaniye, çakı, düdük, küçük makas, kâğıt ve kalem, pilli radyo, el feneri ve dayanıklı yedek piller.
+- Amaç: Afet sonrası ilk 72 saatte, yardım ekipleri ulaşana kadar acil ihtiyaçları ve değerli evrakları saklamak. [K1][K4]
+- Kolay ulaşılabilir bir yerde durmalı. Sadece evde değil, iş yerinde ve okulda da bulundurulmalı. [K3][K4]
+- Her birey için ayrı çanta hazırlanmalı ve içeriği kontrol edilmeli. [K3]
+- Çanta; bebek, yaşlı, engelli gibi sorumlu olunan kişilerin ve varsa evcil hayvanların ihtiyaçlarını da içermeli. [K4]
+- Su: Her aile üyesi düşünülerek yeterli içme suyu. [K3][K4]
+- Gıda: Bozulmaya dayanıklı 3 günlük yiyecek; yüksek kalorili, vitamin ve karbonhidrat içeren, su kaybını önleyen gıdalar (konserve, kuru meyve, tahin-pekmez, meyve suyu vb.). [K3][K4]
+- İçindeki yiyecek ve içecekler düzenli olarak kontrol edilmeli. [K4]
+- Önemli belge fotokopileri: Kimlik kartları (nüfus cüzdanı, ehliyet vb.), tapu, sigorta ve ruhsat belgeleri, Zorunlu Deprem Poliçesi, diplomalar, pasaport, banka cüzdanı, evcil hayvan sağlık karnesi. [K4]
+- Para. [K3]
+- Kişisel ilaçlar (7 günlük). [K3]
+- Giysi: İç çamaşırı, çorap, yağmurluk, mevsime/iklime uygun temiz giysi. [K3][K4]
+- İlk yardım çantası / malzemeleri. [K3][K4]
+- Hijyen malzemeleri: Sabun ve dezenfektan, diş fırçası ve macunu, ıslak mendil, tuvalet kâğıdı, hijyenik ped. [K4]
+- Diğer: Uyku tulumu veya battaniye, çok amaçlı çakı, düdük, küçük makas, kâğıt ve kalem, pilli radyo, el feneri ve dayanıklı/uzun ömürlü yedek piller, çöp poşeti, afet ve acil durum aile planı. [K3][K4]
 
 2) DEPREM ÖNCESİ
-- Aile afet ve acil durum planı yapın: Deprem sonrası buluşma noktasını ve şehir dışından ulaşılacak bir irtibat kişisini belirleyin.
-- Oturduğunuz yere en yakın acil toplanma alanını öğrenin (e-Devlet ve AFAD üzerinden sorgulanabilir).
-- Dolap, kitaplık, beyaz eşya gibi devrilebilecek eşyaları duvara sabitleyin. Ağır eşyaları alt raflara koyun.
-- Yatağın üzerine düşebilecek ayna, tablo gibi eşyaları kaldırın.
-- Evdeki güvenli noktaları (sağlam mobilya yanı, iç duvar dibi) ve tehlikeli noktaları (pencere, cam, devrilebilecek eşya önü) belirleyin.
-- Bina güvenliği: Binanızın depreme dayanıklılığından şüpheniz varsa yetkili kurum ve uzmanlara inceletin. Zorunlu Deprem Sigortası (DASK) yaptırın.
-- Ailece deprem tatbikatı yapın.
+- Aile afet ve acil durum planı yapın: Evin içinde ve dışında buluşma yerleri, bölge dışında bağlantı kurulacak kişi ve telefon numaraları belirleyin. [K5]
+- Önemli evrakların kopyalarını hazırlayın; bir nüshasını bölge dışındaki bağlantınıza, bir nüshasını çantaya koyun. [K5]
+- Acil durum telefonlarını öğrenin. Mahalle ölçeğinde tahliyeyi belediyeye sorun, öğrenin. Komşularınızla afet anında yardımlaşmayı konuşun. [K5]
+- Her odada en güvenli ve riskli yerleri belirleyin; evdeki ve binadaki alternatif çıkış yollarını belirleyin. [K5]
+- Ağır mobilyaları, beyaz eşyaları, elektronik eşyaları, tüp gazları ve aydınlatma eşyalarını duvara/döşemeye sabitleyin. Kombi, termosifon, şofben, buzdolabı, fırın ve gaz tertibatını sabitleyin. [K1][K5]
+- Ağır ve büyük eşyaları alt raflara koyun; mutfak dolabı kapaklarına güvenlik mandalı taktırın. [K5]
+- Resim, tablo gibi nesneleri yataklardan, koltuklardan, sandalyelerden uzak bir yere asın. [K5]
+- Çıkış yollarını kapatabilecek nesneleri kaldırın. [K5]
+- Yatakların yanına su, düdük, fener ve ayakkabı koyun. [K5]
+- Hasarlı elektrik kablolarını ve gaz sızıntısı yapabilecek tesisatı profesyonele onartın; kendiniz işlem yapmayın. Su ve gaz tesisatında esnek malzeme kullandırın. [K1]
+- Böcek ilacı, ot ilacı ve yanıcı/parlayıcı maddeleri kilitli, kapalı dolaplarda ve alt raflarda tutun. [K1][K5]
+- Yangın söndürücü bulundurun ve kullanmayı öğrenin. Elektrik şalteri, su ve doğal gaz vanalarının yerini ve nasıl kapatılacağını öğrenin. [K5]
+- Bina güvenliği: Binanızın güncel deprem yönetmeliğine göre yapılıp yapılmadığını öğrenin; değilse yetkili bir mühendise inceletin. [K5]
+- Binanın tasarımını değiştirmeyin; taşıyıcı kolon, kiriş ve duvarlara zarar vermeyin. İzinsiz balkon veya kat eklemeyin. [K1][K5]
+- Ailenizle Çök-Kapan-Tutun tatbikatı yapın. [K1]
 
 3) DEPREM ANINDA
-- Panik yapmayın.
-- ÇÖK - KAPAN - TUTUN: Sağlam bir masa veya mobilya yanına çökün, başınızı ve boynunuzu kollarınızla koruyun, sarsıntı bitene kadar tutunun.
-- Pencerelerden, camlardan ve devrilebilecek eşyalardan uzak durun.
-- Asansör kullanmayın. Merdivenlere ve balkona koşmayın.
-- Yataktaysanız, yatakta kalıp başınızı yastıkla koruyun.
-- Dışarıdaysanız binalardan, elektrik direklerinden ve duvarlardan uzak açık alana geçin.
-- Araçtaysanız güvenli bir yerde durun, köprü, üst geçit ve binalardan uzak durun, araç içinde kalın.
-- Tekerlekli sandalye kullanan kişi: Tekerlekleri kilitleyin, başınızı ve boynunuzu koruyun.
+Bina içindeyseniz:
+- Kesinlikle panik yapmayın. [K2]
+- Güvenli bir yer bulup ÇÖK - KAPAN - TUTUN: Diz üstü çökün, baş ve enseyi koruyacak şekilde kapanın, düşmemek için sabit bir yere tutunun. Sarsıntı durana kadar olduğunuz yerde kalın. [K2]
+- Sağlam masa altına ya da dolgun koltuk, kanepe gibi koruma sağlayabilecek eşya yanına çömelin; başınızı ellerinizle veya yastık, kitap gibi bir malzemeyle koruyun. [K2]
+- Cam, pencere, dışarıya bakan duvar ve kapılardan, aydınlatma armatürlerinden ve sabitlenmemiş dolap, raf gibi eşyalardan uzak durun. [K1][K2]
+- Yataktaysanız orada kalın. Üzerinize düşecek ağır eşya yoksa başınızı yastıkla koruyun; varsa en yakın güvenli alana geçin. [K2]
+- Merdivenlere ya da çıkışlara koşmayın. Sarsıntı sırasında binayı terk etmeye çalışmayın. [K1][K2]
+- Balkona çıkmayın; balkon veya pencereden atlamayın. Asansör kullanmayın. [K2]
+- Acil durum ve yangın bildirmek dışında telefon kullanmayın. Kibrit, çakmak yakmayın; elektrik düğmelerine dokunmayın. [K2]
+- Tekerlekli sandalyedeyseniz tekerlekleri kilitleyip başınızı ve boynunuzu koruyun. [K2]
+- Mutfaktaysanız ocak, fırın gibi cihazları kapatın, dökülebilecek maddelerden uzaklaşın. [K2]
+Dışarıdaysanız:
+- Dışarıda kalın. Enerji hatlarından, binalardan, direklerden, ağaçlardan ve duvar diplerinden uzaklaşın. [K1][K2]
+- Deniz kıyısından ve kaya düşebilecek yamaç altlarından uzaklaşın. [K2]
+Araçtaysanız:
+- Bulunduğunuz yer güvenliyse (bina, ağaç, direk yanında ve üst geçit altında durmadan) yolu kapatmadan sağa yanaşıp durun; kontak anahtarını yerinde bırakıp pencereler kapalı araç içinde kalın. [K1][K2]
+- Araç meskûn mahalde ya da güvenli olmayan bir yerdeyse aracı durdurun, anahtarı üzerinde bırakıp aracı terk edin ve açık alana gidin. [K2]
+- Hasarlı yol, köprü ve rampaları kullanmayın. [K2]
+Toplu taşımadaysanız:
+- Gerekmedikçe metro ve trenden inmeyin; sıkıca tutunun ve personelin talimatlarını izleyin. [K2]
 
 4) DEPREM SONRASI
-- Sarsıntı bittikten sonra binayı dikkatlice, merdivenleri kullanarak terk edin ve acil toplanma alanına gidin.
-- Hasarlı binalara girmeyin. Artçı sarsıntılara hazırlıklı olun.
-- Gaz kaçağı şüphesinde kibrit, çakmak ve elektrik düğmesi kullanmayın.
-- Telefonu acil durumlar dışında kullanmayın, hatları meşgul etmeyin. Mümkünse kısa mesaj kullanın.
-- Enkaz altındaysanız düdük çalın veya borulara vurarak ses verin. Bağırmak enerji tüketir.
-- Resmî kurumların (AFAD, 112) duyurularını takip edin. Doğrulanmamış bilgileri yaymayın.
+- Kendinizin ve ailenizin yaralanıp yaralanmadığını kontrol edin. Ayakkabılarınızı giyin. [K5]
+- Etrafınıza bakıp emniyetinizden emin olduktan sonra binayı daha önce belirlediğiniz yoldan terk edin. [K1][K2]
+- Elektrik, gaz ve su vanalarını kapatın; soba ve ısıtıcıları söndürün. [K1][K2]
+- Gaz kokusu alırsanız gaz vanasını kapatın, camları ve kapıları açın, hemen binayı terk edin. Kibrit, çakmak kullanmayın. [K1][K5]
+- Afet ve acil durum çantanızı alarak toplanma bölgesine gidin. [K1][K2]
+- Her büyük depremden sonra artçı deprem olur. Sarsıntılar tamamen bitene kadar hasarlı binalara girmeyin; artçılarda da Çök-Kapan-Tutun yapın. [K2][K5]
+- Deniz kenarındaysanız tsunami tehlikesine karşı sahilden uzaklaşıp yüksek yerlere çıkın. [K1]
+- Yardıma ihtiyaç duyabilecek bebek, çocuk, yaşlı, engelli ve hamilelere destek olun. [K1]
+Enkaz altında kaldıysanız:
+- Kibrit ve çakmak yakmayın. Hareket etmeyin, toz kaldırmayın. Ağzınızı ve burnunuzu mendil veya kıyafetle kapatın. [K2]
+- Borulara ya da duvarlara vurarak yerinizi bildirin ve ıslık çalın. Bağırmayı son çare olarak kullanın; bağırmak tehlikeli miktarda toz yutmanıza neden olabilir. [K2]
 - Acil durum numarası: 112

@@ -6,7 +6,7 @@ Her senaryoyu uygulamada çalıştırın ve tabloyu doldurun. Bu tablo raporun "
 |---|---|---|---|---|---|---|
 | 1 | 1 yetişkin | 2018 sonrası, 1-3. kat | Genel plan; kişiye özel boş | | | |
 | 2 | 2 yetişkin + 1 bebek | 2000 öncesi, 4+ kat | Mama/bez; uzman incelemesi uyarısı; merdiven uyarısı | | | |
-| 3 | 1 yaşlı (tek başına yaşıyor), ilaç: evet | Bilmiyorum, zemin | İlaç + reçete kopyası; yaşlıya özel madde; yapım yılını öğrenme uyarısı | | | |
+| 3 | 1 yaşlı (tek başına yaşıyor), ilaç: evet | Bilmiyorum, zemin | 7 günlük kişisel ilaç; yaşlıya özel madde; yapım yılını öğrenme uyarısı | | | |
 | 4 | 2 yetişkin + 1 tekerlekli sandalye kullanan (hareket kısıtlı) | 2000-2018 | "Tekerlekleri kilitle"; tahliyede kim yardım edecek | | | |
 | 5 | 2 yetişkin + 2 çocuk + kedi | 2000 öncesi, çatlak var | Kedi maması/taşıma çantası; çatlak uyarısı; "Sade anlat → çocuk" çalışıyor | | | |
 | 6 | 4 yetişkin + 2 yaşlı + 1 bebek + köpek | 2000 öncesi | Kalabalık hanede miktarların ölçeklenmesi | | | |

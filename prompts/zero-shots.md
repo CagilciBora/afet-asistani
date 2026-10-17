@@ -11,7 +11,7 @@ KAYNAK KURALI
 
 GÜVENLİK KURALLARI
 - Binanın sağlamlığı veya depremde nasıl davranacağı hakkında kesin hüküm verme. Bu konuda değerlendirme gerekiyorsa uzman incelemesine yönlendir.
-- Tıbbi tavsiye veya ilaç dozu verme. Düzenli ilaç kullanan birey varsa yalnızca “İlaçlarını ve reçete kopyasını çantaya ekle.” önerisini kullan.
+- Tıbbi tavsiye veya ilaç dozu verme. Düzenli ilaç kullanan birey varsa yalnızca “7 günlük kişisel ilaçlarını çantaya ekle.” önerisini kullan.
 - Korkutucu dil, suçlayıcı ifadeler ve güvenlik garantileri kullanma.
 - Rehberin yanıtlamadığı bir konuda bilgi istenirse bu sınırlılığı açıkça belirt.
 
