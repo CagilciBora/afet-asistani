@@ -1,0 +1,155 @@
+{
+  "olcum": {
+    "ad": "1 yetişkin",
+    "model": "gemini-3.5-flash",
+    "kapsanan": 12,
+    "gerekli": 12,
+    "kodla_eklenen": [],
+    "gruplar": [],
+    "eksik_grup": [],
+    "cot": true,
+    "isaret": []
+  },
+  "hane": "Hane: 1 yetişkin. Bebek: 0, çocuk: 0, yaşlı: 0, bunlardan hareket kısıtlı: 0. Düzenli ilaç: hayır. Evcil hayvan: yok. Bina yapım yılı: 2018 sonrası. Kat: 1-3. kat. Binada çatlak/hasar: yok.",
+  "ek_not": "",
+  "dikkat": [],
+  "plan": {
+    "dusunce": "a) Hanede kırılgan birey, düzenli ilaç kullanan kimse veya evcil hayvan bulunmamaktadır.\nb) Bina 2018 sonrası yapılmış ve 1-3. katta yer alıyor; mevcut bir hasar bildirilmemiş. Yine de kesin sağlamlık beyanında bulunulmayacak, standart güvenlik önlemleri uygulanacaktır.\nc) Tek kişilik afet çantası hazırlanması, evdeki eşyaların sabitlenmesi, sarsıntı anında Çök-Kapan-Tutun uygulanması ve sonrasında vanaların kapatılarak toplanma alanına gidilmesi en kritik adımlardır.\nd) Bütün maddeler AFAD rehberi esas alınarak hazırlanmıştır.",
+    "risk_ozeti": "Binanızın 2018 sonrası yapılmış olması ve alt katlarda bulunmanız bir avantaj sağlasa da deprem anındaki riskleri en aza indirmek sizin elinizdedir. Evinizdeki eşyaları sabitleyerek ve doğru davranış adımlarını öğrenerek güvenliğinizi artırabilirsiniz. Binanızın durumuyla ilgili kesin bir değerlendirme için ihtiyaç halinde yetkili uzman incelemesine başvurabilirsiniz.",
+    "oncesi": [
+      "Kişisel ihtiyaçlarınıza uygun, ilk 72 saat yetecek su, dayanıklı gıda, fener, düdük ve ilk yardım malzemeleri içeren bir afet ve acil durum çantası hazırlayın.",
+      "Evinizdeki ağır mobilyaları, beyaz eşyaları ve düşebilecek elektronik cihazları duvara sabitleyin.",
+      "Yatağınızın yanına su, düdük, fener ve ayakkabı koyun.",
+      "Elektrik şalteri, su ve doğal gaz vanalarının yerlerini ve nasıl kapatılacağını öğrenin.",
+      "Aile afet ve acil durum planı yaparak şehir dışı iletişim kişisi ve ev dışı toplanma yeri belirleyin.",
+      "Önemli belgelerinizin fotokopilerini hazırlayıp afet çantanıza yerleştirin.",
+      "Ev içinde güvenli Çök-Kapan-Tutun noktalarını ve alternatif çıkış yollarını belirleyin."
+    ],
+    "aninda": [
+      "Sarsıntı başladığında kesinlikle panik yapmayın ve olduğunuz yerde kalın.",
+      "Sağlam bir eşyanın yanında ÇÖK - KAPAN - TUTUN hareketini uygulayarak başınızı ve boynunuzu koruyun.",
+      "Pencerelerden, cam eşyalardan ve sabitlenmemiş ağır dolaplardan uzak durun.",
+      "Sarsıntı sırasında merdivenlere, çıkışlara veya balkona koşmayın; asansör kesinlikle kullanmayın.",
+      "Mutfaktaysanız ocak ve fırın gibi cihazları kapatıp dökülebilecek maddelerden uzaklaşın.",
+      "Kibrit, çakmak yakmayın ve elektrik düğmelerine dokunmayın."
+    ],
+    "sonrasi": [
+      "Sarsıntı tamamen bittiğinde emniyetinizden emin olup ayakkabılarınızı giyin.",
+      "Elektrik, gaz ve su vanalarını kapatın; gaz kokusu hissederseniz camları açıp hemen binayı terk edin.",
+      "Afet ve acil durum çantanızı alarak binadan çıkın ve toplanma alanına gidin.",
+      "Artçı sarsıntılar bitene kadar hasarlı olabilecek binalara kesinlikle girmeyin.",
+      "Telefonları sadece acil durumları bildirmek için kullanın, hatları meşgul etmeyin."
+    ],
+    "kisiye_ozel": []
+  },
+  "canta_ham": {
+    "kategoriler": [
+      {
+        "kategori": "Su ve gıda",
+        "esyalar": [
+          {
+            "esya": "içme suyu",
+            "miktar": "kişi başı 3 günlük",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "bozulmaya dayanıklı gıdalar (konserve, kuru meyve, tahin-pekmez vb.)",
+            "miktar": "3 günlük",
+            "kimin_icin": "herkes"
+          }
+        ]
+      },
+      {
+        "kategori": "Belgeler ve Para",
+        "esyalar": [
+          {
+            "esya": "kimlik, tapu, sigorta, DASK, diploma, pasaport ve banka cüzdanı fotokopileri",
+            "miktar": "1 dosya",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "nakit para",
+            "miktar": "yeterli miktarda",
+            "kimin_icin": "herkes"
+          }
+        ]
+      },
+      {
+        "kategori": "Giysi",
+        "esyalar": [
+          {
+            "esya": "iç çamaşırı, çorap, yağmurluk ve mevsime uygun temiz giysi",
+            "miktar": "1 takım",
+            "kimin_icin": "herkes"
+          }
+        ]
+      },
+      {
+        "kategori": "İlk yardım",
+        "esyalar": [
+          {
+            "esya": "ilk yardım çantası ve malzemeleri",
+            "miktar": "1 adet",
+            "kimin_icin": "herkes"
+          }
+        ]
+      },
+      {
+        "kategori": "Hijyen",
+        "esyalar": [
+          {
+            "esya": "sabun, dezenfektan, diş fırçası ve macunu, ıslak mendil, tuvalet kâğıdı, hijyenik ped",
+            "miktar": "3 günlük",
+            "kimin_icin": "herkes"
+          }
+        ]
+      },
+      {
+        "kategori": "Diğer",
+        "esyalar": [
+          {
+            "esya": "düdük",
+            "miktar": "1 adet",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "el feneri ve yedek piller",
+            "miktar": "1 set",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "pilli radyo",
+            "miktar": "1 adet",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "uyku tulumu veya battaniye",
+            "miktar": "1 adet",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "çok amaçlı çakı ve küçük makas",
+            "miktar": "1 adet",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "kâğıt ve kalem",
+            "miktar": "1 set",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "çöp poşeti",
+            "miktar": "1 paket",
+            "kimin_icin": "herkes"
+          },
+          {
+            "esya": "afet ve acil durum aile planı",
+            "miktar": "1 adet",
+            "kimin_icin": "herkes"
+          }
+        ]
+      }
+    ]
+  },
+  "sade_cocuk": null
+}

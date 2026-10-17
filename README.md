@@ -55,4 +55,4 @@ streamlit run app.py
 - `tests/senaryolar.md` — test senaryoları ve sonuçlar
 - `tests/degerlendir.py` — senaryoları gerçek modelle çalıştırıp ölçütleri `tests/sonuclar.md`'ye yazar
 - `tests/test_ui.py`, `tests/test_logic.py` — model çağrısı yapmayan testler (`python -m unittest discover tests`)
-- `rapor.pdf` — proje raporu
+- `rapor.pdf` — proje raporu (`rapor/rapor_olustur.py` ile `tests/ciktilar/` sonuçlarından üretilir: `pip install reportlab && python rapor/rapor_olustur.py`)
