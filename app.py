@@ -61,7 +61,7 @@ if gonder:
         st.warning("Hareket kısıtlı kişi sayısı, hanedeki toplam kişi sayısından fazla olamaz.")
         st.stop()
     try:
-        with st.spinner("Plan ve çanta listesi hazırlanıyor (yaklaşık 10-20 sn)..."):
+        with st.spinner("Plan ve çanta listesi hazırlanıyor..."):
             plan, canta_ham = plan_ve_canta(h, logic.model_adi())
     except RuntimeError as e:
         st.error(str(e))
