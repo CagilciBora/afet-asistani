@@ -8,6 +8,19 @@ from dotenv import load_dotenv
 import logic
 
 load_dotenv()
+
+
+@st.cache_data(show_spinner=False, max_entries=100)
+def plan_ve_canta(h: logic.Hane, model: str):
+    """Plan ve çanta birbirinden bağımsız: iki model çağrısı paralel yapılır.
+    Aynı hane bilgisi tekrar gönderilirse model çağrılmaz, önbellekten anında gelir (demo ve kota için)."""
+    client = logic.get_client()
+    with ThreadPoolExecutor(max_workers=2) as havuz:
+        plan_is = havuz.submit(logic.plan_uret, client, h)
+        canta_is = havuz.submit(logic.canta_uret, client, h)
+        return plan_is.result(), canta_is.result()
+
+
 st.set_page_config(page_title="Afet Hazırlık Asistanı", page_icon="🧭", layout="centered")
 
 st.title("🧭 Afet Hazırlık Asistanı")
@@ -48,12 +61,8 @@ if gonder:
         st.warning("Hareket kısıtlı kişi sayısı, hanedeki toplam kişi sayısından fazla olamaz.")
         st.stop()
     try:
-        client = logic.get_client()
-        # Plan ve çanta birbirinden bağımsız: iki model çağrısı paralel yapılır, bekleme süresi yarıya iner
-        with st.spinner("Plan ve çanta listesi hazırlanıyor..."), ThreadPoolExecutor(max_workers=2) as havuz:
-            plan_is = havuz.submit(logic.plan_uret, client, h)
-            canta_is = havuz.submit(logic.canta_uret, client, h)
-            plan, canta_ham = plan_is.result(), canta_is.result()
+        with st.spinner("Plan ve çanta listesi hazırlanıyor (yaklaşık 10-20 sn)..."):
+            plan, canta_ham = plan_ve_canta(h, logic.model_adi())
     except RuntimeError as e:
         st.error(str(e))
         st.stop()

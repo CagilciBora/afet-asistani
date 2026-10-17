@@ -7,7 +7,9 @@ import time
 from dataclasses import dataclass
 from pathlib import Path
 
-MODEL = "gemini-3.8-flash"  # .env içinde GEMINI_MODEL ile değiştirilebilir (günlük kota dolarsa)
+MODEL = "gemini-3.5-flash"             # .env içinde GEMINI_MODEL ile değiştirilebilir
+YEDEK_MODEL = "gemini-3.1-flash-lite"  # ana model yavaş/yoğun/kotası dolu ise; GEMINI_YEDEK_MODEL ile değişir
+ZAMAN_ASIMI = 25                       # sn; ana model bu sürede cevap vermezse yedek modele geçilir
 ROOT = Path(__file__).parent
 
 
@@ -58,12 +60,14 @@ def dikkat_noktalari(h: Hane) -> list[str]:
 
 # ---------------- Model çağrısı ----------------
 
-def get_client():
+def get_client(zaman_asimi: int | None = ZAMAN_ASIMI):
     from google import genai
+    from google.genai import types
     key = os.getenv("GEMINI_API_KEY")
     if not key:
         raise RuntimeError("GEMINI_API_KEY bulunamadı. .env dosyasına ekleyin.")
-    return genai.Client(api_key=key)
+    http = types.HttpOptions(timeout=zaman_asimi * 1000) if zaman_asimi else None  # Google'ın alt sınırı 10 sn
+    return genai.Client(api_key=key, http_options=http)
 
 
 def model_adi() -> str:
@@ -71,7 +75,7 @@ def model_adi() -> str:
 
 
 # Sunucu yoğunluğu / kota gibi geçici hatalar: tekrar denemek ya da yedek modele geçmek işe yarar
-GECICI_HATALAR = ("503", "UNAVAILABLE", "500", "INTERNAL", "429", "RESOURCE_EXHAUSTED")
+GECICI_HATALAR = ("503", "UNAVAILABLE", "500", "INTERNAL", "429", "RESOURCE_EXHAUSTED", "504", "DEADLINE_EXCEEDED")
 
 
 def call_llm(client, system: str, user: str, temperature: float, as_json: bool = True):
@@ -81,7 +85,7 @@ def call_llm(client, system: str, user: str, temperature: float, as_json: bool =
         temperature=temperature,
         response_mime_type="application/json" if as_json else "text/plain",
     )
-    modeller = [model_adi()] + [m for m in [os.getenv("GEMINI_YEDEK_MODEL")] if m]
+    modeller = [model_adi()] + [m for m in [os.getenv("GEMINI_YEDEK_MODEL", YEDEK_MODEL)] if m]
     son_hata = None
     for model in modeller:
         for bekleme in (2, 5, 0):
@@ -92,8 +96,8 @@ def call_llm(client, system: str, user: str, temperature: float, as_json: bool =
                 son_hata = e
                 if not any(k in str(e) for k in GECICI_HATALAR):
                     raise  # kalıcı hata (anahtar, model adı, bozuk JSON): tekrar denemek işe yaramaz
-                if "PerDay" in str(e) or not bekleme:
-                    break  # günlük kota doldu ya da denemeler bitti → varsa yedek modele geç
+                if "PerDay" in str(e) or "DEADLINE_EXCEEDED" in str(e) or not bekleme:
+                    break  # kota doldu / model çok yavaş / denemeler bitti → varsa yedek modele geç
                 time.sleep(bekleme)
     raise son_hata
 
@@ -102,7 +106,7 @@ def hata_mesaji(e: Exception) -> str:
     """Model hatasını kullanıcının anlayacağı bir cümleye çevirir."""
     if "PerDay" in str(e):
         return "Günlük ücretsiz model kotası doldu. .env içinde GEMINI_MODEL ile başka bir model seçin ya da yarın deneyin."
-    if any(k in str(e) for k in ("503", "UNAVAILABLE", "429")):
+    if any(k in str(e) for k in ("503", "UNAVAILABLE", "429", "DEADLINE_EXCEEDED")):
         return "Model şu an çok yoğun (Google tarafında geçici bir sorun). Birkaç saniye sonra tekrar deneyin."
     return f"Model cevabı alınamadı, tekrar deneyin. ({e})"
 

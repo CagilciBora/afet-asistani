@@ -61,6 +61,17 @@ class ModelCagrisi(unittest.TestCase):
         logic.call_llm(client, "s", "u", 0)
         self.assertEqual(client.cagrilar, ["ana", "yedek"])
 
+    def test_zaman_asiminda_beklemeden_yedege_gecilir(self, _):
+        client = SahteModel("504 DEADLINE_EXCEEDED")
+        logic.call_llm(client, "s", "u", 0)
+        self.assertEqual(client.cagrilar, ["ana", "yedek"])
+
+    def test_yedek_bos_ise_kapali(self, _):
+        client = SahteModel(*["503 UNAVAILABLE"] * 3)
+        with patch.dict(os.environ, {"GEMINI_YEDEK_MODEL": ""}), self.assertRaises(RuntimeError):
+            logic.call_llm(client, "s", "u", 0)
+        self.assertEqual(client.cagrilar, ["ana"] * 3)
+
     def test_kalici_hata_tekrar_denenmez(self, _):
         client = SahteModel("400 API key not valid")
         with self.assertRaises(RuntimeError):

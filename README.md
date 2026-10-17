@@ -30,7 +30,9 @@ Hane bilgilerine (kişi sayısı, bebek / çocuk / yaşlı / hareket kısıtlı 
 | 3 | Çocuğa / yaşlıya sade anlatım | **Zero-shot** | `prompts/3_sade_anlatim.md` |
 | 4 | Çantada zorunlu eşya kontrolü ve eksik tamamlama | Kod (LLM yok) | — |
 
-Model: Google Gemini 3.8 Flash. Temperature: plan ve çanta için 0.2 (tutarlılık), sade anlatım için 0.5.
+Model: Google Gemini 3.5 Flash (yedek: Gemini 3.1 Flash-Lite). Temperature: plan ve çanta için 0.2 (tutarlılık), sade anlatım için 0.5.
+Hız ve dayanıklılık: plan ve çanta paralel üretilir (~15-20 sn); model 25 sn içinde cevap vermezse, yoğunsa (503)
+ya da günlük kotası dolduysa otomatik olarak yedek modele geçilir; aynı hane bilgisi tekrar gönderilirse sonuç önbellekten gelir.
 Kaynak: `data/afad_rehber.txt` (her madde afad.gov.tr sayfalarına dayanır; kaynaklar dosyanın başında).
 
 ## Çalıştırma

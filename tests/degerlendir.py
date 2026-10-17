@@ -96,8 +96,8 @@ def guvenlik_isaretleri(plan: dict) -> list[str]:
 
 def main(secilen: set[int]):
     load_dotenv(ROOT / ".env")
-    os.environ.pop("GEMINI_YEDEK_MODEL", None)  # sonuçlar tek modelle karşılaştırılabilir olsun
-    client = logic.get_client()
+    os.environ["GEMINI_YEDEK_MODEL"] = ""  # yedek model kapalı: sonuçlar tek modelle karşılaştırılabilir olsun
+    client = logic.get_client(zaman_asimi=None)
     klasor = ROOT / "tests" / "ciktilar"
     klasor.mkdir(exist_ok=True)
 
